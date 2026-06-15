@@ -52,7 +52,7 @@ The app shows a note name (like **A4**) and its frequency in Hz.
 | **START/STOP** (top right) | Play or stop the tone |
 | **BACK** (bottom right) | Exit the app |
 
-- The app has 36 notes from **C3** (low) to **B5** (high)
+- The app has 12 notes from **C4** to **B4** (one octave), looping around
 - It starts on **A4** (440 Hz), the standard tuning reference
 - When a tone is playing, the note name turns blue
 - The dots around the edge of the screen show where you are in the 12-note
@@ -80,7 +80,7 @@ The app plays sound through the watch's beeper using the Connect IQ
 `Attention.playTone()` API. This API is gated by the system-level **Alert
 Tones** setting — if Alert Tones is off, `playTone()` silently does nothing.
 There is no way for an app to override this; Garmin enforces it at the OS
-level.
+level ([confirmed by Garmin staff](https://forums.garmin.com/developer/connect-iq/f/discussion/195502/can-ciq-ignore-devicesettings-for-tones-vibrate)).
 
 To enable it: from the watch face, hold **UP** → **System** → **Sounds** →
 **Alert Tones** → turn it on.

@@ -32,6 +32,12 @@ Build:
 "$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin/monkeyc" -d fr245m -f monkey.jungle -o bin/pitch-pipe.prg -y developer_key.der -w
 ```
 
+Release build:
+
+```
+"$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin/monkeyc" -d fr245m -f monkey.jungle -o bin/pitch-pipe-release.prg -y developer_key.der -w -r
+```
+
 Launch the simulator:
 
 ```
