@@ -1,0 +1,79 @@
+<!-- Fetched from: https://developer.garmin.com/connect-iq/api-docs/Toybox/Attention.html -->
+<!-- Date: 2026-06-14 -->
+<!-- Note: Content extracted via WebFetch; the original page uses client-side rendering,
+     but the API doc pages served enough structured content to extract. -->
+
+<h1>Module: Toybox.Attention</h1>
+
+<p>The Attention module enables control of audio alerts, vibration patterns,
+backlight, and flashlight on Garmin devices. Support varies by device model,
+so capability checks are recommended before use.</p>
+
+<h2>Methods</h2>
+
+<h3>playTone(options)</h3>
+<p>Plays either predefined tones or custom tone sequences.</p>
+<pre>
+playTone(options as Attention.Tone or {
+  :toneProfile as Lang.Array&lt;Attention.ToneProfile&gt;,
+  :repeatCount as Lang.Number
+}) as Void
+</pre>
+<p>Accepts either a tone constant or a dictionary with <code>:toneProfile</code>
+(array of ToneProfile objects) and <code>:repeatCount</code> parameters.</p>
+<p>Example: <code>Attention.playTone(Attention.TONE_LOUD_BEEP)</code></p>
+<p>Not all devices fully support this module, so <code>has</code> checks are
+recommended. For example, the vivoactive does not have a tone generator and
+will trigger an error if an app attempts to play sounds.</p>
+<p>Recommended pattern: <code>if (Attention has :playTone) { ... }</code></p>
+
+<h3>vibrate(vibeProfiles)</h3>
+<p>Engages the vibration motor using an array of 1-8 VibeProfile objects in
+sequence. Each profile specifies intensity (0-100) and duration in
+milliseconds.</p>
+
+<h3>backlight(setting)</h3>
+<p>Controls display backlight via boolean (on/off at system level) or float
+(0.0-1.0 for brightness). Respects device timeout settings and may throw
+BacklightOnTooLongException on devices with burn-in protection.</p>
+
+<h3>setFlashlightMode(mode, options)</h3>
+<p>Configures flashlight with mode (OFF/ON/STROBE), color, brightness, and
+strobe parameters. Returns a FlashlightResult code.</p>
+
+<h3>hasFlashlightColor(color)</h3>
+<p>Boolean check confirming whether a specific flashlight color is supported.</p>
+
+<h2>Tone Constants</h2>
+<table>
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td>TONE_KEY</td><td>0</td><td>Indicates that a key was pressed</td></tr>
+<tr><td>TONE_START</td><td>1</td><td>Indicates that an activity has started</td></tr>
+<tr><td>TONE_STOP</td><td>2</td><td>Indicates that an activity has stopped</td></tr>
+<tr><td>TONE_MSG</td><td>3</td><td>Indicates that a message is available</td></tr>
+<tr><td>TONE_ALERT_HI</td><td>4</td><td>An alert ending with a high note</td></tr>
+<tr><td>TONE_ALERT_LO</td><td>5</td><td>An alert ending with a low note</td></tr>
+<tr><td>TONE_LOUD_BEEP</td><td>6</td><td>A loud beep</td></tr>
+<tr><td>TONE_INTERVAL_ALERT</td><td>7</td><td>Indicates a change in interval</td></tr>
+<tr><td>TONE_ALARM</td><td>8</td><td>Indicates an alarm has triggered</td></tr>
+<tr><td>TONE_RESET</td><td>9</td><td>Indicates that the activity was reset</td></tr>
+<tr><td>TONE_LAP</td><td>10</td><td>Indicates that the user has completed a lap</td></tr>
+<tr><td>TONE_CANARY</td><td>11</td><td>An annoying sound to get the users attention</td></tr>
+<tr><td>TONE_TIME_ALERT</td><td>12</td><td>An alert that a time threshold has been met</td></tr>
+<tr><td>TONE_DISTANCE_ALERT</td><td>13</td><td>An alert that a distance threshold has been met</td></tr>
+<tr><td>TONE_FAILURE</td><td>14</td><td>Indicates that the activity was a failure</td></tr>
+<tr><td>TONE_SUCCESS</td><td>15</td><td>Indicates that the activity was a success</td></tr>
+<tr><td>TONE_POWER</td><td>16</td><td>The power on tone</td></tr>
+<tr><td>TONE_LOW_BATTERY</td><td>17</td><td>Indicates that the device has low battery power</td></tr>
+<tr><td>TONE_ERROR</td><td>18</td><td>Indicates an error occurred</td></tr>
+</table>
+
+<h2>Classes</h2>
+<ul>
+<li><strong>ToneProfile</strong>: Defines frequency and duration for custom tones</li>
+<li><strong>VibeProfile</strong>: Defines intensity and duration for vibration patterns</li>
+<li><strong>BacklightOnTooLongException</strong>: Thrown when backlight exceeds safe continuous duration</li>
+</ul>
+
+<h2>Supported App Types</h2>
+<p>Watch apps, widgets, glances, data fields, and audio content providers.</p>
