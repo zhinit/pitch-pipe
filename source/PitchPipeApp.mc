@@ -15,7 +15,9 @@ class PitchPipeApp extends Application.AppBase {
     }
 
     function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
-        return [new PitchPipeView(), new PitchPipeDelegate()];
+        var selector = new NoteSelector();
+        var player = new TonePlayer();
+        return [new PitchPipeView(selector, player), new PitchPipeDelegate(selector, player)];
     }
 
 }
