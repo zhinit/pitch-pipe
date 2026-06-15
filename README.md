@@ -10,11 +10,10 @@ tone.
 
 ### Step 1: Download the app file
 
-On this page, look for the green **Code** button near the top. Ignore it.
-Instead, look in the file list for the folder called **`bin`**. Click on it,
-then click on **`pitch-pipe-release.prg`**. On the next page, click the
-**Download** button (it's a downward arrow icon on the right side). The file
-will download to your Mac.
+On this page, look in the file list for the folder called **`bin`**. Click on
+it, then click on **`pitch-pipe-release.prg`**. On the next page, click the
+**Download raw file** button (it's a downward arrow icon on the right side).
+The file will download to your Mac.
 
 ### Step 2: Connect your watch
 
