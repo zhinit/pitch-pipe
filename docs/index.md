@@ -2,4 +2,4 @@
 
 ## Decisions
 
-- (none yet)
+- [[decisions]] — app type, toggle model, tone strategy, frequencies, note range, permissions

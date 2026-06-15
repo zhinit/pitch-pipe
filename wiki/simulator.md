@@ -54,10 +54,13 @@ Launch the simulator, then load the app:
 
 ## What the simulator cannot test accurately
 
-- **ToneProfile audio** — the simulator does not accurately emulate tone
-  profiles. For a pitch pipe, the simulator can verify the app doesn't crash,
-  but pitch accuracy must be verified on a physical device.
-  (source: forum-playtones-new-devices.md)
+- **ToneProfile audio** — the simulator synthesizes tones into a WAV file
+  (`$TMPDIR/com.garmin.connectiq/GARMIN.wav`) at 8 kHz / 8-bit mono. It does
+  generate the requested frequency, but the low sample rate and bit depth
+  produce poor quality. The WAV is always 5 seconds regardless of the
+  ToneProfile duration parameter. Developers report "it sounds much better on
+  the watch than in the simulator."
+  (source: forum-simulator-tone-wav.md, forum-playtones-new-devices.md)
 - **Memory limits** — apps run with more available memory than on real
   hardware; an app that works in the simulator may fail on the device.
   (source: forum-simulator-feature-request.md)

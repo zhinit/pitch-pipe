@@ -6,6 +6,8 @@
 - [[monkey-c]] — Garmin's programming language: syntax, types, classes, modules, annotations, memory management
 - [[monkey-types]] — Gradual type system: four check levels, type annotations, typed containers, poly types
 - [[simulator]] — Device simulator: VS Code and CLI workflows, capabilities, limitations for tone testing
+- [[simulator-blue-triangle]] — Blue triangle = "no app running"; appears on both crash and normal exit
+- [[app-exit]] — BACK button handling: don't handle onBack, let the system exit
 
 ## Development & Testing
 

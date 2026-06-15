@@ -37,10 +37,5 @@ class PitchPipeDelegate extends WatchUi.BehaviorDelegate {
         return true;
     }
 
-    function onBack() as Boolean {
-        _player.stop();
-        WatchUi.popView(WatchUi.SLIDE_RIGHT);
-        return true;
-    }
 
 }

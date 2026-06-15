@@ -155,3 +155,36 @@ Wiki pages created:
 Wiki pages updated:
 
 - index — Added UI & Input, App Architecture sections
+
+## 2026-06-15 — Research: simulator blue triangle and BACK button exit
+
+Sources archived:
+
+- forum-simulator-blue-triangle.md — Blue triangle means "no app running" (crash or normal exit)
+- forum-onback-exit-app.md — Garmin staff: return false or don't implement onBack on initial view
+- forum-simulator-button-terminate.md — Known simulator bug: button presses terminate apps in some SDK versions
+- forum-simulator-logs.md — No simulator log files; use VS Code Output panel or terminal exit codes
+
+Wiki pages created:
+
+- simulator-blue-triangle — What the blue triangle means, how to distinguish crash from exit
+- app-exit — Correct BACK button handling for watch-apps and widgets
+
+Wiki pages updated:
+
+- index — Added simulator-blue-triangle and app-exit entries
+
+## 2026-06-15 — Research: simulator ToneProfile frequency handling
+
+Sources archived:
+
+- forum-simulator-tone-wav.md — Simulator generates GARMIN.wav from ToneProfile; 8kHz/8-bit; does synthesize requested frequency
+
+Local analysis confirmed the simulator does generate correct frequencies in
+the WAV file. The "same tone" perception is due to low audio quality (8 kHz
+sample rate, 8-bit depth) through laptop speakers. WAV duration is fixed at
+5 seconds regardless of ToneProfile duration parameter.
+
+Wiki pages updated:
+
+- simulator — Updated ToneProfile section with WAV file details and quality info
