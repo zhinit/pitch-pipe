@@ -1,0 +1,80 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 5; @symbol_classdef = [PitchPipeApp,5,6,18]; @symbol_extends<0> = [Application,5,27,38]; @symbol_extends<1> = [AppBase,5,39,46]; ]
+class PitchPipeApp extends Application.AppBase {
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_7_26_9_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" 8 8 ]
+        symbol [ AppBase %tmp.2 8 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 8 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_7_26_9_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 11; @symbol_functiondef = [onStart,11,13,20]; @symbol_param<0> = [state,11,21,26]; @symbol_param<0>_type<0> = [Dictionary,11,30,40]; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 14; @symbol_functiondef = [onStop,14,13,19]; @symbol_param<0> = [state,14,20,25]; @symbol_param<0>_type<0> = [Dictionary,14,29,39]; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 17; @symbol_functiondef = [getInitialView,17,13,27]; @symbol_return<0> = [WatchUi,17,34,41]; @symbol_return<1> = [Views,17,42,47]; @symbol_return<2> = [WatchUi,17,53,60]; @symbol_return<3> = [Views,17,61,66]; @symbol_return<4> = [WatchUi,17,68,75]; @symbol_return<5> = [InputDelegates,17,76,90]; ]
+    function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" 18 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_stop" ]
+        %selector.1 = local;
+        symbol [ selector %selector.1 18 12 20 ];
+        symbol [ NoteSelector %tmp.4 18 27 39 ];
+        %tmp.4 = getv ? :NoteSelector;
+        %tmp.1 = newc %tmp.4 ();
+        lputv %selector.1 %tmp.1;
+        symbol [ selector %selector.1 18 12 20 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" 19 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_stop" ]
+        %player.2 = local;
+        symbol [ player %player.2 19 12 18 ];
+        symbol [ TonePlayer %tmp.8 19 25 35 ];
+        %tmp.8 = getv ? :TonePlayer;
+        %tmp.5 = newc %tmp.8 ();
+        lputv %player.2 %tmp.5;
+        symbol [ player %player.2 19 12 18 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" 20 8 ]
+        %tmp.9 = newa 2;
+        symbol [ PitchPipeView %tmp.13 20 20 33 ];
+        %tmp.13 = getv ? :PitchPipeView;
+        %tmp.14 = lgetv %selector.1;
+        symbol [ selector %tmp.14 20 34 42 ];
+        %tmp.15 = lgetv %player.2;
+        symbol [ player %tmp.15 20 44 50 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14, %tmp.15);
+        %tmp.16 = dup %tmp.9;
+        %tmp.17 = aputv %tmp.16 0 %tmp.10;
+        symbol [ PitchPipeDelegate %tmp.21 20 57 74 ];
+        %tmp.21 = getv ? :PitchPipeDelegate;
+        %tmp.22 = lgetv %selector.1;
+        symbol [ selector %tmp.22 20 75 83 ];
+        %tmp.23 = lgetv %player.2;
+        symbol [ player %tmp.23 20 85 91 ];
+        %tmp.18 = newc %tmp.21 (%tmp.22, %tmp.23);
+        %tmp.24 = dup %tmp.17;
+        %tmp.25 = aputv %tmp.24 1 %tmp.18;
+        ret %tmp.25;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeApp_mc_17_92_21_4_stop:
+    }
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc"; @line = 1; ]
+<init> {
+}

@@ -174,6 +174,22 @@ Wiki pages updated:
 
 - index — Added simulator-blue-triangle and app-exit entries
 
+## 2026-06-15 — Research: Alert Tones system setting and playTone dependency
+
+Sources archived:
+
+- connectiq-devicesettings-api.md — Toybox.System.DeviceSettings full API reference
+- forum-ciq-ignore-devicesettings-tones.md — Garmin confirms apps cannot override tonesOn/vibrateOn
+
+Wiki pages created:
+
+- device-tone-setting — System setting dependency, detection via tonesOn, FR245M menu path
+
+Wiki pages updated:
+
+- attention-api — Added system setting dependency section
+- index — Added device-tone-setting entry
+
 ## 2026-06-15 — Research: simulator ToneProfile frequency handling
 
 Sources archived:

@@ -1,0 +1,368 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Test,2,14,18]; ]
+import Toybox.Test;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 5; test = true; @symbol_functiondef = [testInitiallyNotPlaying,5,9,32]; @symbol_param<0> = [logger,5,33,39]; @symbol_param<0>_type<0> = [Test,5,43,47]; @symbol_param<0>_type<1> = [Logger,5,48,54]; @symbol_return<0> = [Boolean,5,59,66]; ]
+function testInitiallyNotPlaying(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_5_67_9_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 6 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_5_67_9_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_5_67_9_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 6 8 14 ];
+    symbol [ TonePlayer %tmp.4 6 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 6 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 7 4 ]
+    symbol [ Test %tmp.5 7 4 8 ];
+    %tmp.5 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.6 7 9 20 ];
+    %tmp.6 = getv function %tmp.5 :assertEqual;
+    %tmp.7 = lgetv %player.1;
+    symbol [ player %tmp.7 7 21 27 ];
+    symbol [ isPlaying %tmp.8 7 28 37 ];
+    %tmp.8 = getv function %tmp.7 :isPlaying;
+    %tmp.9 = invoke %tmp.7 %tmp.8();
+    %tmp.10 = false;
+    invoke %tmp.5 %tmp.6(%tmp.9, %tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 8 4 ]
+    %tmp.11 = true;
+    ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_5_67_9_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 12; test = true; @symbol_functiondef = [testPlaySetsPlaying,12,9,28]; @symbol_param<0> = [logger,12,29,35]; @symbol_param<0>_type<0> = [Test,12,39,43]; @symbol_param<0>_type<1> = [Logger,12,44,50]; @symbol_return<0> = [Boolean,12,55,62]; ]
+function testPlaySetsPlaying(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 13 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 13 8 14 ];
+    symbol [ TonePlayer %tmp.4 13 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 13 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 14 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 14 4 10 ];
+    symbol [ play %tmp.6 14 11 15 ];
+    %tmp.6 = getv function %tmp.5 :play;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 15 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_stop" ]
+    %result.2 = local;
+    symbol [ result %result.2 15 8 14 ];
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 15 17 23 ];
+    symbol [ isPlaying %tmp.9 15 24 33 ];
+    %tmp.9 = getv function %tmp.8 :isPlaying;
+    %tmp.10 = invoke %tmp.8 %tmp.9();
+    lputv %result.2 %tmp.10;
+    symbol [ result %result.2 15 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 16 4 ]
+    %tmp.11 = lgetv %player.1;
+    symbol [ player %tmp.11 16 4 10 ];
+    symbol [ stop %tmp.12 16 11 15 ];
+    %tmp.12 = getv function %tmp.11 :stop;
+    invoke %tmp.11 %tmp.12();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 17 4 ]
+    symbol [ Test %tmp.13 17 4 8 ];
+    %tmp.13 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.14 17 9 20 ];
+    %tmp.14 = getv function %tmp.13 :assertEqual;
+    %tmp.15 = lgetv %result.2;
+    symbol [ result %tmp.15 17 21 27 ];
+    %tmp.16 = true;
+    invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 18 4 ]
+    %tmp.17 = true;
+    ret %tmp.17;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_12_63_19_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 22; test = true; @symbol_functiondef = [testStopClearsPlaying,22,9,30]; @symbol_param<0> = [logger,22,31,37]; @symbol_param<0>_type<0> = [Test,22,41,45]; @symbol_param<0>_type<1> = [Logger,22,46,52]; @symbol_return<0> = [Boolean,22,57,64]; ]
+function testStopClearsPlaying(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_22_65_28_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 23 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_22_65_28_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_22_65_28_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 23 8 14 ];
+    symbol [ TonePlayer %tmp.4 23 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 23 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 24 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 24 4 10 ];
+    symbol [ play %tmp.6 24 11 15 ];
+    %tmp.6 = getv function %tmp.5 :play;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 25 4 ]
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 25 4 10 ];
+    symbol [ stop %tmp.9 25 11 15 ];
+    %tmp.9 = getv function %tmp.8 :stop;
+    invoke %tmp.8 %tmp.9();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 26 4 ]
+    symbol [ Test %tmp.10 26 4 8 ];
+    %tmp.10 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.11 26 9 20 ];
+    %tmp.11 = getv function %tmp.10 :assertEqual;
+    %tmp.12 = lgetv %player.1;
+    symbol [ player %tmp.12 26 21 27 ];
+    symbol [ isPlaying %tmp.13 26 28 37 ];
+    %tmp.13 = getv function %tmp.12 :isPlaying;
+    %tmp.14 = invoke %tmp.12 %tmp.13();
+    %tmp.15 = false;
+    invoke %tmp.10 %tmp.11(%tmp.14, %tmp.15);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 27 4 ]
+    %tmp.16 = true;
+    ret %tmp.16;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_22_65_28_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 31; test = true; @symbol_functiondef = [testToggleSameFreqStops,31,9,32]; @symbol_param<0> = [logger,31,33,39]; @symbol_param<0>_type<0> = [Test,31,43,47]; @symbol_param<0>_type<1> = [Logger,31,48,54]; @symbol_return<0> = [Boolean,31,59,66]; ]
+function testToggleSameFreqStops(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_31_67_37_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 32 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_31_67_37_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_31_67_37_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 32 8 14 ];
+    symbol [ TonePlayer %tmp.4 32 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 32 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 33 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 33 4 10 ];
+    symbol [ toggle %tmp.6 33 11 17 ];
+    %tmp.6 = getv function %tmp.5 :toggle;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 34 4 ]
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 34 4 10 ];
+    symbol [ toggle %tmp.9 34 11 17 ];
+    %tmp.9 = getv function %tmp.8 :toggle;
+    %tmp.10 = 440;
+    invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 35 4 ]
+    symbol [ Test %tmp.11 35 4 8 ];
+    %tmp.11 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.12 35 9 20 ];
+    %tmp.12 = getv function %tmp.11 :assertEqual;
+    %tmp.13 = lgetv %player.1;
+    symbol [ player %tmp.13 35 21 27 ];
+    symbol [ isPlaying %tmp.14 35 28 37 ];
+    %tmp.14 = getv function %tmp.13 :isPlaying;
+    %tmp.15 = invoke %tmp.13 %tmp.14();
+    %tmp.16 = false;
+    invoke %tmp.11 %tmp.12(%tmp.15, %tmp.16);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 36 4 ]
+    %tmp.17 = true;
+    ret %tmp.17;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_31_67_37_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 40; test = true; @symbol_functiondef = [testToggleDifferentFreqKeepsPlaying,40,9,44]; @symbol_param<0> = [logger,40,45,51]; @symbol_param<0>_type<0> = [Test,40,55,59]; @symbol_param<0>_type<1> = [Logger,40,60,66]; @symbol_return<0> = [Boolean,40,71,78]; ]
+function testToggleDifferentFreqKeepsPlaying(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 41 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 41 8 14 ];
+    symbol [ TonePlayer %tmp.4 41 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 41 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 42 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 42 4 10 ];
+    symbol [ toggle %tmp.6 42 11 17 ];
+    %tmp.6 = getv function %tmp.5 :toggle;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 43 4 ]
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 43 4 10 ];
+    symbol [ toggle %tmp.9 43 11 17 ];
+    %tmp.9 = getv function %tmp.8 :toggle;
+    %tmp.10 = 262;
+    invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 44 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_stop" ]
+    %result.2 = local;
+    symbol [ result %result.2 44 8 14 ];
+    %tmp.11 = lgetv %player.1;
+    symbol [ player %tmp.11 44 17 23 ];
+    symbol [ isPlaying %tmp.12 44 24 33 ];
+    %tmp.12 = getv function %tmp.11 :isPlaying;
+    %tmp.13 = invoke %tmp.11 %tmp.12();
+    lputv %result.2 %tmp.13;
+    symbol [ result %result.2 44 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 45 4 ]
+    %tmp.14 = lgetv %player.1;
+    symbol [ player %tmp.14 45 4 10 ];
+    symbol [ stop %tmp.15 45 11 15 ];
+    %tmp.15 = getv function %tmp.14 :stop;
+    invoke %tmp.14 %tmp.15();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 46 4 ]
+    symbol [ Test %tmp.16 46 4 8 ];
+    %tmp.16 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.17 46 9 20 ];
+    %tmp.17 = getv function %tmp.16 :assertEqual;
+    %tmp.18 = lgetv %result.2;
+    symbol [ result %tmp.18 46 21 27 ];
+    %tmp.19 = true;
+    invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 47 4 ]
+    %tmp.20 = true;
+    ret %tmp.20;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_40_79_48_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 51; test = true; @symbol_functiondef = [testStopWhenNotPlayingIsSafe,51,9,37]; @symbol_param<0> = [logger,51,38,44]; @symbol_param<0>_type<0> = [Test,51,48,52]; @symbol_param<0>_type<1> = [Logger,51,53,59]; @symbol_return<0> = [Boolean,51,64,71]; ]
+function testStopWhenNotPlayingIsSafe(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_51_72_56_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 52 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_51_72_56_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_51_72_56_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 52 8 14 ];
+    symbol [ TonePlayer %tmp.4 52 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 52 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 53 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 53 4 10 ];
+    symbol [ stop %tmp.6 53 11 15 ];
+    %tmp.6 = getv function %tmp.5 :stop;
+    invoke %tmp.5 %tmp.6();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 54 4 ]
+    symbol [ Test %tmp.7 54 4 8 ];
+    %tmp.7 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.8 54 9 20 ];
+    %tmp.8 = getv function %tmp.7 :assertEqual;
+    %tmp.9 = lgetv %player.1;
+    symbol [ player %tmp.9 54 21 27 ];
+    symbol [ isPlaying %tmp.10 54 28 37 ];
+    %tmp.10 = getv function %tmp.9 :isPlaying;
+    %tmp.11 = invoke %tmp.9 %tmp.10();
+    %tmp.12 = false;
+    invoke %tmp.7 %tmp.8(%tmp.11, %tmp.12);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 55 4 ]
+    %tmp.13 = true;
+    ret %tmp.13;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_51_72_56_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 59; test = true; @symbol_functiondef = [testPlayWhileAlreadyPlaying,59,9,36]; @symbol_param<0> = [logger,59,37,43]; @symbol_param<0>_type<0> = [Test,59,47,51]; @symbol_param<0>_type<1> = [Logger,59,52,58]; @symbol_return<0> = [Boolean,59,63,70]; ]
+function testPlayWhileAlreadyPlaying(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 60 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 60 8 14 ];
+    symbol [ TonePlayer %tmp.4 60 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 60 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 61 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 61 4 10 ];
+    symbol [ play %tmp.6 61 11 15 ];
+    %tmp.6 = getv function %tmp.5 :play;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 62 4 ]
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 62 4 10 ];
+    symbol [ play %tmp.9 62 11 15 ];
+    %tmp.9 = getv function %tmp.8 :play;
+    %tmp.10 = 262;
+    invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 63 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_stop" ]
+    %result.2 = local;
+    symbol [ result %result.2 63 8 14 ];
+    %tmp.11 = lgetv %player.1;
+    symbol [ player %tmp.11 63 17 23 ];
+    symbol [ isPlaying %tmp.12 63 24 33 ];
+    %tmp.12 = getv function %tmp.11 :isPlaying;
+    %tmp.13 = invoke %tmp.11 %tmp.12();
+    lputv %result.2 %tmp.13;
+    symbol [ result %result.2 63 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 64 4 ]
+    %tmp.14 = lgetv %player.1;
+    symbol [ player %tmp.14 64 4 10 ];
+    symbol [ stop %tmp.15 64 11 15 ];
+    %tmp.15 = getv function %tmp.14 :stop;
+    invoke %tmp.14 %tmp.15();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 65 4 ]
+    symbol [ Test %tmp.16 65 4 8 ];
+    %tmp.16 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.17 65 9 20 ];
+    %tmp.17 = getv function %tmp.16 :assertEqual;
+    %tmp.18 = lgetv %result.2;
+    symbol [ result %tmp.18 65 21 27 ];
+    %tmp.19 = true;
+    invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 66 4 ]
+    %tmp.20 = true;
+    ret %tmp.20;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_59_71_67_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 70; test = true; @symbol_functiondef = [testDoubleStopIsSafe,70,9,29]; @symbol_param<0> = [logger,70,30,36]; @symbol_param<0>_type<0> = [Test,70,40,44]; @symbol_param<0>_type<1> = [Logger,70,45,51]; @symbol_return<0> = [Boolean,70,56,63]; ]
+function testDoubleStopIsSafe(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_70_64_77_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 71 4 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_70_64_77_0_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_70_64_77_0_stop" ]
+    %player.1 = local;
+    symbol [ player %player.1 71 8 14 ];
+    symbol [ TonePlayer %tmp.4 71 21 31 ];
+    %tmp.4 = getv ? :TonePlayer;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %player.1 %tmp.1;
+    symbol [ player %player.1 71 8 14 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 72 4 ]
+    %tmp.5 = lgetv %player.1;
+    symbol [ player %tmp.5 72 4 10 ];
+    symbol [ play %tmp.6 72 11 15 ];
+    %tmp.6 = getv function %tmp.5 :play;
+    %tmp.7 = 440;
+    invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 73 4 ]
+    %tmp.8 = lgetv %player.1;
+    symbol [ player %tmp.8 73 4 10 ];
+    symbol [ stop %tmp.9 73 11 15 ];
+    %tmp.9 = getv function %tmp.8 :stop;
+    invoke %tmp.8 %tmp.9();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 74 4 ]
+    %tmp.10 = lgetv %player.1;
+    symbol [ player %tmp.10 74 4 10 ];
+    symbol [ stop %tmp.11 74 11 15 ];
+    %tmp.11 = getv function %tmp.10 :stop;
+    invoke %tmp.10 %tmp.11();
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 75 4 ]
+    symbol [ Test %tmp.12 75 4 8 ];
+    %tmp.12 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.13 75 9 20 ];
+    %tmp.13 = getv function %tmp.12 :assertEqual;
+    %tmp.14 = lgetv %player.1;
+    symbol [ player %tmp.14 75 21 27 ];
+    symbol [ isPlaying %tmp.15 75 28 37 ];
+    %tmp.15 = getv function %tmp.14 :isPlaying;
+    %tmp.16 = invoke %tmp.14 %tmp.15();
+    %tmp.17 = false;
+    invoke %tmp.12 %tmp.13(%tmp.16, %tmp.17);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc" 76 4 ]
+    %tmp.18 = true;
+    ret %tmp.18;
+_Users_hookline_coding_projects_pitch_pipe_test_TestTonePlayer_mc_70_64_77_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestTonePlayer.mc"; @line = 1; ]
+<init> {
+}

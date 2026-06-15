@@ -32,6 +32,7 @@
 ## Audio APIs
 
 - [[attention-api]] — Toybox.Attention module: playTone, vibrate, backlight, device capability checks
+- [[device-tone-setting]] — Alert Tones system setting: apps cannot override, how to detect, FR245M menu path
 - [[toneprofile-api]] — Custom tones via frequency (Hz) + duration (ms); the core mechanism for a pitch pipe
 - [[beeper-vs-speaker]] — Hardware distinction determining whether ToneProfile works; FR245M is a beeper device
 - [[tone-sustain]] — playTone behavior: async, second call cancels first, no stop API, timer re-trigger strategy

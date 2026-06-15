@@ -69,7 +69,7 @@ Tests: `test/TestTonePlayer.mc` — 8 tests.
 
 - onSelect toggles playback at current note's frequency
 - UP/DOWN while playing restarts tone at new frequency
-- Note name turns green when playing
+- Note name turns blue when playing
 - onHide stops playback
 - "No tone support" shown if Attention API unavailable
 
@@ -78,9 +78,12 @@ Tests: `test/TestTonePlayer.mc` — 8 tests.
 ## Step 7: UI Polish — DONE
 
 - 12-dot chromatic ring around edge (precomputed trig lookup table)
-- Current note dot larger and highlighted (green when playing)
+- Current note dot larger and highlighted (blue when playing, muted red idle)
 - Prev/next note hints at top/bottom in FONT_XTINY
 - All positions pre-calculated in onLayout()
+- Muted red/blue color palette: dusty rose idle, Garmin COLOR_BLUE when
+  playing. Custom hex colors snap to nearest of 64 available on the MIP
+  display — named constants render more predictably.
 
 ---
 
@@ -127,12 +130,13 @@ long tone to eliminate them.
 
 ---
 
-## Step 11: Build for Device
+## Step 11: Build for Device — DONE
 
-- Build release PRG
-- Verify file size < 128 KB
-- Side-load: copy .prg to GARMIN/APPS/ via USB
-- Document instructions for the brother
+- Release PRG built with `-O2`: `bin/pitch-pipe-release.prg` (95 KB, under
+  128 KB limit)
+- README.md created with side-loading instructions for a non-technical user
+- PRG committed to repo (bin/ not gitignored) so brother can download from
+  GitHub directly
 
 ---
 
@@ -149,6 +153,8 @@ long tone to eliminate them.
 ```
 manifest.xml
 monkey.jungle
+.gitignore
+README.md
 source/
   PitchPipeApp.mc      — AppBase, getInitialView
   PitchPipeView.mc     — View, onLayout, onUpdate (draws UI)
@@ -163,6 +169,9 @@ test/
 resources/
   strings/strings.xml  — app name
   drawables/           — launcher icon + drawables.xml
+bin/
+  pitch-pipe.prg       — debug build
+  pitch-pipe-release.prg — release build (send this to the watch)
 ```
 
 ## Build Commands

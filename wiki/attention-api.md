@@ -50,4 +50,12 @@ vibrate(vibeProfiles as Array<VibeProfile>) as Void
 Watch apps, widgets, glances, data fields, audio content providers.
 (source: connectiq-attention-api.md)
 
-See also: [[toneprofile-api]], [[beeper-vs-speaker]], [[fr245m-device]]
+## System Setting Dependency
+
+`playTone()` silently does nothing if the user has Alert Tones disabled in
+device settings. Apps cannot override this. Check
+`System.getDeviceSettings().tonesOn` to detect the state.
+(source: forum-ciq-ignore-devicesettings-tones.md)
+
+See also: [[toneprofile-api]], [[beeper-vs-speaker]], [[fr245m-device]],
+[[device-tone-setting]]

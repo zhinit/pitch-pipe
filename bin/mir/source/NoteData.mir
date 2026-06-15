@@ -1,0 +1,164 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 3; @symbol_moduledef = [NoteData,3,7,15]; ]
+module NoteData {
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 3; ]
+    <init> {
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 5 10 ]
+        %tmp.1 = newa 12;
+        %tmp.2 = "C";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "C#";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "D";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "D#";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "E";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "F";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "F#";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "G";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "G#";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "A";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "A#";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "B";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        putv self :NOTE_NAMES %tmp.37;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 13 10 ]
+        %tmp.38 = newa 12;
+        %tmp.39 = 262;
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 0 %tmp.39;
+        %tmp.42 = 277;
+        %tmp.43 = dup %tmp.41;
+        %tmp.44 = aputv %tmp.43 1 %tmp.42;
+        %tmp.45 = 294;
+        %tmp.46 = dup %tmp.44;
+        %tmp.47 = aputv %tmp.46 2 %tmp.45;
+        %tmp.48 = 311;
+        %tmp.49 = dup %tmp.47;
+        %tmp.50 = aputv %tmp.49 3 %tmp.48;
+        %tmp.51 = 330;
+        %tmp.52 = dup %tmp.50;
+        %tmp.53 = aputv %tmp.52 4 %tmp.51;
+        %tmp.54 = 349;
+        %tmp.55 = dup %tmp.53;
+        %tmp.56 = aputv %tmp.55 5 %tmp.54;
+        %tmp.57 = 370;
+        %tmp.58 = dup %tmp.56;
+        %tmp.59 = aputv %tmp.58 6 %tmp.57;
+        %tmp.60 = 392;
+        %tmp.61 = dup %tmp.59;
+        %tmp.62 = aputv %tmp.61 7 %tmp.60;
+        %tmp.63 = 415;
+        %tmp.64 = dup %tmp.62;
+        %tmp.65 = aputv %tmp.64 8 %tmp.63;
+        %tmp.66 = 440;
+        %tmp.67 = dup %tmp.65;
+        %tmp.68 = aputv %tmp.67 9 %tmp.66;
+        %tmp.69 = 466;
+        %tmp.70 = dup %tmp.68;
+        %tmp.71 = aputv %tmp.70 10 %tmp.69;
+        %tmp.72 = 494;
+        %tmp.73 = dup %tmp.71;
+        %tmp.74 = aputv %tmp.73 11 %tmp.72;
+        putv self :FREQUENCIES %tmp.74;
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 5; @position = 10; @symbol_constdef = [NOTE_NAMES,5,10,20]; @symbol_type<0> = [Array,5,24,29]; @symbol_type<1> = [String,5,30,36]; ]
+    const NOTE_NAMES as Array<String>;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 10; @position = 10; @symbol_constdef = [OCTAVE,10,10,16]; @symbol_type<0> = [Number,10,20,26]; ]
+    const OCTAVE as Number = 4;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 11; @position = 10; @symbol_constdef = [NOTE_COUNT,11,10,20]; @symbol_type<0> = [Number,11,24,30]; ]
+    const NOTE_COUNT as Number = 12;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 13; @position = 10; @symbol_constdef = [FREQUENCIES,13,10,21]; @symbol_type<0> = [Array,13,25,30]; @symbol_type<1> = [Number,13,31,37]; ]
+    const FREQUENCIES as Array<Number>;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 18; @position = 10; @symbol_constdef = [A4_INDEX,18,10,18]; @symbol_type<0> = [Number,18,22,28]; ]
+    const A4_INDEX as Number = 9;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 20; @symbol_functiondef = [getNoteName,20,13,24]; @symbol_param<0> = [index,20,25,30]; @symbol_param<0>_type<0> = [Number,20,34,40]; @symbol_return<0> = [String,20,45,51]; ]
+    function getNoteName(index as Number) as String {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_20_52_22_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 21 8 ]
+        symbol [ NOTE_NAMES %tmp.2 21 15 25 ];
+        %tmp.2 = getv ? :NOTE_NAMES;
+        %tmp.3 = lgetv %index;
+        symbol [ index %tmp.3 21 26 31 ];
+        %tmp.4 = agetv %tmp.2 %tmp.3;
+        ret %tmp.4;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_20_52_22_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 24; @symbol_functiondef = [getOctave,24,13,22]; @symbol_param<0> = [index,24,23,28]; @symbol_param<0>_type<0> = [Number,24,32,38]; @symbol_return<0> = [Number,24,43,49]; ]
+    function getOctave(index as Number) as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_24_50_26_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 25 8 ]
+        symbol [ OCTAVE %tmp.2 25 15 21 ];
+        %tmp.2 = getv ? :OCTAVE;
+        ret %tmp.2;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_24_50_26_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 28; @symbol_functiondef = [getFrequency,28,13,25]; @symbol_param<0> = [index,28,26,31]; @symbol_param<0>_type<0> = [Number,28,35,41]; @symbol_return<0> = [Number,28,46,52]; ]
+    function getFrequency(index as Number) as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_28_53_30_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 29 8 ]
+        symbol [ FREQUENCIES %tmp.2 29 15 26 ];
+        %tmp.2 = getv ? :FREQUENCIES;
+        %tmp.3 = lgetv %index;
+        symbol [ index %tmp.3 29 27 32 ];
+        %tmp.4 = agetv %tmp.2 %tmp.3;
+        ret %tmp.4;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_28_53_30_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 32; @symbol_functiondef = [getDisplayName,32,13,27]; @symbol_param<0> = [index,32,28,33]; @symbol_param<0>_type<0> = [Number,32,37,43]; @symbol_return<0> = [String,32,48,54]; ]
+    function getDisplayName(index as Number) as String {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_32_55_34_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 33 8 ]
+        %tmp.1 = self;
+        symbol [ getNoteName %tmp.2 33 15 26 ];
+        %tmp.2 = getv function %tmp.1 :getNoteName;
+        %tmp.3 = lgetv %index;
+        symbol [ index %tmp.3 33 27 32 ];
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        %tmp.5 = self;
+        symbol [ getOctave %tmp.6 33 36 45 ];
+        %tmp.6 = getv function %tmp.5 :getOctave;
+        %tmp.7 = lgetv %index;
+        symbol [ index %tmp.7 33 46 51 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        symbol [ toString %tmp.9 33 53 61 ];
+        %tmp.9 = getv function %tmp.8 :toString;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = add %tmp.4 %tmp.10;
+        ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_32_55_34_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 36; @symbol_functiondef = [getNoteCount,36,13,25]; @symbol_return<0> = [Number,36,31,37]; ]
+    function getNoteCount() as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_36_38_38_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" 37 8 ]
+        symbol [ NOTE_COUNT %tmp.2 37 15 25 ];
+        %tmp.2 = getv ? :NOTE_COUNT;
+        ret %tmp.2;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteData_mc_36_38_38_4_stop:
+    }
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc"; @line = 1; ]
+<init> {
+}

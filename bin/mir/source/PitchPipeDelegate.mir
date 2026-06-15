@@ -1,0 +1,180 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 4; @symbol_classdef = [PitchPipeDelegate,4,6,23]; @symbol_extends<0> = [WatchUi,4,32,39]; @symbol_extends<1> = [BehaviorDelegate,4,40,56]; ]
+class PitchPipeDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 6; @position = 16; @symbol_vardef = [_selector,6,16,25]; @symbol_type<0> = [NoteSelector,6,29,41]; ]
+    private
+    var _selector as NoteSelector;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 7; @position = 16; @symbol_vardef = [_player,7,16,23]; @symbol_type<0> = [TonePlayer,7,27,37]; ]
+    private
+    var _player as TonePlayer;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [selector,9,24,32]; @symbol_param<0>_type<0> = [NoteSelector,9,36,48]; @symbol_param<1> = [player,9,50,56]; @symbol_param<1>_type<0> = [TonePlayer,9,60,70]; ]
+    function initialize(selector as NoteSelector, player as TonePlayer) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_9_72_13_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 10 8 ]
+        symbol [ BehaviorDelegate %tmp.2 10 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 10 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 11 8 ]
+        %tmp.4 = lgetv %selector;
+        symbol [ selector %tmp.4 11 20 28 ];
+        symbol [ _selector ? 11 8 17 ];
+        putv self :_selector %tmp.4;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 12 8 ]
+        %tmp.5 = lgetv %player;
+        symbol [ player %tmp.5 12 18 24 ];
+        symbol [ _player ? 12 8 15 ];
+        putv self :_player %tmp.5;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_9_72_13_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 15; @symbol_functiondef = [onSelect,15,13,21]; @symbol_return<0> = [Boolean,15,27,34]; ]
+    function onSelect() as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_15_35_20_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 16 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_15_35_20_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_15_35_20_4_stop" ]
+        %freq.1 = local;
+        symbol [ freq %freq.1 16 12 16 ];
+        symbol [ NoteData %tmp.2 16 19 27 ];
+        %tmp.2 = getv ? :NoteData;
+        symbol [ getFrequency %tmp.3 16 28 40 ];
+        %tmp.3 = getv function %tmp.2 :getFrequency;
+        symbol [ _selector %tmp.5 16 41 50 ];
+        %tmp.5 = getv ? :_selector;
+        symbol [ getCurrentIndex %tmp.6 16 51 66 ];
+        %tmp.6 = getv function %tmp.5 :getCurrentIndex;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = invoke %tmp.2 %tmp.3(%tmp.7);
+        lputv %freq.1 %tmp.8;
+        symbol [ freq %freq.1 16 12 16 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 17 8 ]
+        symbol [ _player %tmp.10 17 8 15 ];
+        %tmp.10 = getv ? :_player;
+        symbol [ toggle %tmp.11 17 16 22 ];
+        %tmp.11 = getv function %tmp.10 :toggle;
+        %tmp.12 = lgetv %freq.1;
+        symbol [ freq %tmp.12 17 23 27 ];
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 18 8 ]
+        symbol [ WatchUi %tmp.13 18 8 15 ];
+        %tmp.13 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.14 18 16 29 ];
+        %tmp.14 = getv function %tmp.13 :requestUpdate;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 19 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_15_35_20_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 22; @symbol_functiondef = [onNextPage,22,13,23]; @symbol_return<0> = [Boolean,22,29,36]; ]
+    function onNextPage() as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_22_37_29_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 23 8 ]
+        symbol [ _selector %tmp.2 23 8 17 ];
+        %tmp.2 = getv ? :_selector;
+        symbol [ previous %tmp.3 23 18 26 ];
+        %tmp.3 = getv function %tmp.2 :previous;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 24 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_8_26_8_if_stmt:
+        symbol [ _player %tmp.5 24 12 19 ];
+        %tmp.5 = getv ? :_player;
+        symbol [ isPlaying %tmp.6 24 20 29 ];
+        %tmp.6 = getv function %tmp.5 :isPlaying;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        bf %tmp.7 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_8_26_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_8_26_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_33_26_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 25 12 ]
+        symbol [ _player %tmp.9 25 12 19 ];
+        %tmp.9 = getv ? :_player;
+        symbol [ play %tmp.10 25 20 24 ];
+        %tmp.10 = getv function %tmp.9 :play;
+        symbol [ NoteData %tmp.12 25 25 33 ];
+        %tmp.12 = getv ? :NoteData;
+        symbol [ getFrequency %tmp.13 25 34 46 ];
+        %tmp.13 = getv function %tmp.12 :getFrequency;
+        symbol [ _selector %tmp.15 25 47 56 ];
+        %tmp.15 = getv ? :_selector;
+        symbol [ getCurrentIndex %tmp.16 25 57 72 ];
+        %tmp.16 = getv function %tmp.15 :getCurrentIndex;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        invoke %tmp.9 %tmp.10(%tmp.18);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_33_26_8_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_8_26_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_24_8_26_8_if_end:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 27 8 ]
+        symbol [ WatchUi %tmp.19 27 8 15 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.20 27 16 29 ];
+        %tmp.20 = getv function %tmp.19 :requestUpdate;
+        invoke %tmp.19 %tmp.20();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 28 8 ]
+        %tmp.21 = true;
+        ret %tmp.21;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_22_37_29_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 31; @symbol_functiondef = [onPreviousPage,31,13,27]; @symbol_return<0> = [Boolean,31,33,40]; ]
+    function onPreviousPage() as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_31_41_38_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 32 8 ]
+        symbol [ _selector %tmp.2 32 8 17 ];
+        %tmp.2 = getv ? :_selector;
+        symbol [ next %tmp.3 32 18 22 ];
+        %tmp.3 = getv function %tmp.2 :next;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 33 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_8_35_8_if_stmt:
+        symbol [ _player %tmp.5 33 12 19 ];
+        %tmp.5 = getv ? :_player;
+        symbol [ isPlaying %tmp.6 33 20 29 ];
+        %tmp.6 = getv function %tmp.5 :isPlaying;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        bf %tmp.7 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_8_35_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_8_35_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_33_35_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 34 12 ]
+        symbol [ _player %tmp.9 34 12 19 ];
+        %tmp.9 = getv ? :_player;
+        symbol [ play %tmp.10 34 20 24 ];
+        %tmp.10 = getv function %tmp.9 :play;
+        symbol [ NoteData %tmp.12 34 25 33 ];
+        %tmp.12 = getv ? :NoteData;
+        symbol [ getFrequency %tmp.13 34 34 46 ];
+        %tmp.13 = getv function %tmp.12 :getFrequency;
+        symbol [ _selector %tmp.15 34 47 56 ];
+        %tmp.15 = getv ? :_selector;
+        symbol [ getCurrentIndex %tmp.16 34 57 72 ];
+        %tmp.16 = getv function %tmp.15 :getCurrentIndex;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        invoke %tmp.9 %tmp.10(%tmp.18);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_33_35_8_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_8_35_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_33_8_35_8_if_end:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 36 8 ]
+        symbol [ WatchUi %tmp.19 36 8 15 ];
+        %tmp.19 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.20 36 16 29 ];
+        %tmp.20 = getv function %tmp.19 :requestUpdate;
+        invoke %tmp.19 %tmp.20();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" 37 8 ]
+        %tmp.21 = true;
+        ret %tmp.21;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeDelegate_mc_31_41_38_4_stop:
+    }
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc"; @line = 1; ]
+<init> {
+}

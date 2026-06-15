@@ -24,6 +24,26 @@ primary-source research → `wiki/`;
 decisions → `docs/decisions.md`;
 implementation → the app source.
 
+## Build & Run
+
+Build:
+
+```
+"$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin/monkeyc" -d fr245m -f monkey.jungle -o bin/pitch-pipe.prg -y developer_key.der -w
+```
+
+Launch the simulator:
+
+```
+"$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin/connectiq"
+```
+
+Load the app into the simulator:
+
+```
+"$HOME/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-9.2.0-2026-06-09-92a1605b2/bin/monkeydo" bin/pitch-pipe.prg fr245m
+```
+
 ## Commands
 
 Defined in `.claude/commands/`:

@@ -39,3 +39,25 @@ Three octaves covering the practical pitch pipe range. All frequencies
 The lidar-theremin and vibratest reference apps confirm that ToneProfile
 playback requires no manifest permissions. Only their sensor access (Ant)
 required a permission. (wiki/lidar-theremin, wiki/vibratest)
+
+## 007: Don't handle onBack — let the system exit
+
+Garmin staff recommend not implementing onBack on the initial view. Returning
+false or omitting onBack entirely lets the system handle app exit. Calling
+popView on the initial view crashes because there's nothing below it.
+(wiki/app-exit)
+
+## 008: Color palette — muted red idle, named COLOR_BLUE playing
+
+The FR245M's 64-color MIP display snaps custom hex values to the nearest
+available color. Custom hex blues (e.g. 0x4477AA) rendered as purple on the
+simulator. Using Garmin's named COLOR_BLUE (0x00AAFF) renders correctly.
+Idle state uses muted red/rose tones via hex values (0xCC8888, 0x885555,
+0x664444, 0x553333) which the 64-color palette handles without distortion.
+
+## 009: PRG committed to repo
+
+The release build (bin/pitch-pipe-release.prg) is committed to the repo so
+the brother can download it directly from GitHub without needing the SDK.
+bin/ is not in .gitignore. Trade-off: binary bloats git history on rebuilds,
+but acceptable for a small project with infrequent releases.

@@ -20,7 +20,7 @@ class PitchPipeDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() as Boolean {
-        _selector.next();
+        _selector.previous();
         if (_player.isPlaying()) {
             _player.play(NoteData.getFrequency(_selector.getCurrentIndex()));
         }
@@ -29,7 +29,7 @@ class PitchPipeDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onPreviousPage() as Boolean {
-        _selector.previous();
+        _selector.next();
         if (_player.isPlaying()) {
             _player.play(NoteData.getFrequency(_selector.getCurrentIndex()));
         }

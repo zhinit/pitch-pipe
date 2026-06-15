@@ -1,5 +1,6 @@
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.System;
 import Toybox.WatchUi;
 
 class PitchPipeView extends WatchUi.View {
@@ -48,7 +49,7 @@ class PitchPipeView extends WatchUi.View {
     function onUpdate(dc as Dc) as Void {
         var index = _selector.getCurrentIndex();
         var playing = _player.isPlaying();
-        var noteInOctave = index % NoteData.NOTES_PER_OCTAVE;
+        var noteInOctave = index % NoteData.NOTE_COUNT;
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
@@ -68,6 +69,8 @@ class PitchPipeView extends WatchUi.View {
         var freqText = NoteData.getFrequency(index) + " Hz";
         if (!_player.hasToneSupport()) {
             freqText = "No tone support";
+        } else if (!System.getDeviceSettings().tonesOn) {
+            freqText = "Enable Alert Tones";
         }
         dc.drawText(
             _centerX, _freqY,

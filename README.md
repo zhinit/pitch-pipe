@@ -74,6 +74,22 @@ The app shows a note name (like **A4**) and its frequency in Hz.
 
 ---
 
+## Alert Tones must be enabled
+
+The app plays sound through the watch's beeper using the Connect IQ
+`Attention.playTone()` API. This API is gated by the system-level **Alert
+Tones** setting — if Alert Tones is off, `playTone()` silently does nothing.
+There is no way for an app to override this; Garmin enforces it at the OS
+level.
+
+To enable it: from the watch face, hold **UP** → **System** → **Sounds** →
+**Alert Tones** → turn it on.
+
+If Alert Tones is off, the app will show **"Enable Alert Tones"** in place of
+the frequency.
+
+---
+
 ## Feedback
 
 If something doesn't work or a note sounds wrong, let me know:
