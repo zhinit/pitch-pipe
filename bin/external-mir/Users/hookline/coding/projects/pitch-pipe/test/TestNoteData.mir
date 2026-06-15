@@ -1,0 +1,376 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Test,2,14,18]; ]
+import Toybox.Test;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 5; test = true; @symbol_functiondef = [testGetFrequencyA4,5,9,27]; @symbol_param<0> = [logger,5,28,34]; @symbol_param<0>_type<0> = [Test,5,38,42]; @symbol_param<0>_type<1> = [Logger,5,43,49]; @symbol_return<0> = [Boolean,5,54,61]; ]
+function testGetFrequencyA4(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_5_62_8_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 6 4 ]
+    symbol [ Test %tmp.1 6 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 6 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 6 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.5 6 30 42 ];
+    %tmp.5 = getv function %tmp.4 :getFrequency;
+    symbol [ NoteData %tmp.7 6 43 51 ];
+    %tmp.7 = getv ? :NoteData;
+    symbol [ A4_INDEX %tmp.8 6 52 60 ];
+    %tmp.8 = getv %tmp.7 :A4_INDEX;
+    %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.8);
+    %tmp.10 = 440;
+    invoke %tmp.1 %tmp.2(%tmp.9, %tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 7 4 ]
+    %tmp.11 = true;
+    ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_5_62_8_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 11; test = true; @symbol_functiondef = [testGetFrequencyC3,11,9,27]; @symbol_param<0> = [logger,11,28,34]; @symbol_param<0>_type<0> = [Test,11,38,42]; @symbol_param<0>_type<1> = [Logger,11,43,49]; @symbol_return<0> = [Boolean,11,54,61]; ]
+function testGetFrequencyC3(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_11_62_14_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 12 4 ]
+    symbol [ Test %tmp.1 12 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 12 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 12 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.5 12 30 42 ];
+    %tmp.5 = getv function %tmp.4 :getFrequency;
+    %tmp.6 = 0;
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = 131;
+    invoke %tmp.1 %tmp.2(%tmp.7, %tmp.8);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 13 4 ]
+    %tmp.9 = true;
+    ret %tmp.9;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_11_62_14_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 17; test = true; @symbol_functiondef = [testGetFrequencyB5,17,9,27]; @symbol_param<0> = [logger,17,28,34]; @symbol_param<0>_type<0> = [Test,17,38,42]; @symbol_param<0>_type<1> = [Logger,17,43,49]; @symbol_return<0> = [Boolean,17,54,61]; ]
+function testGetFrequencyB5(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_17_62_20_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 18 4 ]
+    symbol [ Test %tmp.1 18 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 18 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 18 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.5 18 30 42 ];
+    %tmp.5 = getv function %tmp.4 :getFrequency;
+    %tmp.6 = 35;
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = 988;
+    invoke %tmp.1 %tmp.2(%tmp.7, %tmp.8);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 19 4 ]
+    %tmp.9 = true;
+    ret %tmp.9;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_17_62_20_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 23; test = true; @symbol_functiondef = [testGetNoteNameA4,23,9,26]; @symbol_param<0> = [logger,23,27,33]; @symbol_param<0>_type<0> = [Test,23,37,41]; @symbol_param<0>_type<1> = [Logger,23,42,48]; @symbol_return<0> = [Boolean,23,53,60]; ]
+function testGetNoteNameA4(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_23_61_26_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 24 4 ]
+    symbol [ Test %tmp.1 24 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 24 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 24 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getNoteName %tmp.5 24 30 41 ];
+    %tmp.5 = getv function %tmp.4 :getNoteName;
+    symbol [ NoteData %tmp.7 24 42 50 ];
+    %tmp.7 = getv ? :NoteData;
+    symbol [ A4_INDEX %tmp.8 24 51 59 ];
+    %tmp.8 = getv %tmp.7 :A4_INDEX;
+    %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.8);
+    %tmp.10 = "A";
+    invoke %tmp.1 %tmp.2(%tmp.9, %tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 25 4 ]
+    %tmp.11 = true;
+    ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_23_61_26_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 29; test = true; @symbol_functiondef = [testGetOctaveA4,29,9,24]; @symbol_param<0> = [logger,29,25,31]; @symbol_param<0>_type<0> = [Test,29,35,39]; @symbol_param<0>_type<1> = [Logger,29,40,46]; @symbol_return<0> = [Boolean,29,51,58]; ]
+function testGetOctaveA4(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_29_59_32_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 30 4 ]
+    symbol [ Test %tmp.1 30 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 30 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 30 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getOctave %tmp.5 30 30 39 ];
+    %tmp.5 = getv function %tmp.4 :getOctave;
+    symbol [ NoteData %tmp.7 30 40 48 ];
+    %tmp.7 = getv ? :NoteData;
+    symbol [ A4_INDEX %tmp.8 30 49 57 ];
+    %tmp.8 = getv %tmp.7 :A4_INDEX;
+    %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.8);
+    %tmp.10 = 4;
+    invoke %tmp.1 %tmp.2(%tmp.9, %tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 31 4 ]
+    %tmp.11 = true;
+    ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_29_59_32_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 35; test = true; @symbol_functiondef = [testGetDisplayNameA4,35,9,29]; @symbol_param<0> = [logger,35,30,36]; @symbol_param<0>_type<0> = [Test,35,40,44]; @symbol_param<0>_type<1> = [Logger,35,45,51]; @symbol_return<0> = [Boolean,35,56,63]; ]
+function testGetDisplayNameA4(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_35_64_38_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 36 4 ]
+    symbol [ Test %tmp.1 36 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 36 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 36 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getDisplayName %tmp.5 36 30 44 ];
+    %tmp.5 = getv function %tmp.4 :getDisplayName;
+    symbol [ NoteData %tmp.7 36 45 53 ];
+    %tmp.7 = getv ? :NoteData;
+    symbol [ A4_INDEX %tmp.8 36 54 62 ];
+    %tmp.8 = getv %tmp.7 :A4_INDEX;
+    %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.8);
+    %tmp.10 = "A4";
+    invoke %tmp.1 %tmp.2(%tmp.9, %tmp.10);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 37 4 ]
+    %tmp.11 = true;
+    ret %tmp.11;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_35_64_38_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 41; test = true; @symbol_functiondef = [testGetDisplayNameC3,41,9,29]; @symbol_param<0> = [logger,41,30,36]; @symbol_param<0>_type<0> = [Test,41,40,44]; @symbol_param<0>_type<1> = [Logger,41,45,51]; @symbol_return<0> = [Boolean,41,56,63]; ]
+function testGetDisplayNameC3(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_41_64_44_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 42 4 ]
+    symbol [ Test %tmp.1 42 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 42 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 42 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getDisplayName %tmp.5 42 30 44 ];
+    %tmp.5 = getv function %tmp.4 :getDisplayName;
+    %tmp.6 = 0;
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = "C3";
+    invoke %tmp.1 %tmp.2(%tmp.7, %tmp.8);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 43 4 ]
+    %tmp.9 = true;
+    ret %tmp.9;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_41_64_44_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 47; test = true; @symbol_functiondef = [testGetDisplayNameB5,47,9,29]; @symbol_param<0> = [logger,47,30,36]; @symbol_param<0>_type<0> = [Test,47,40,44]; @symbol_param<0>_type<1> = [Logger,47,45,51]; @symbol_return<0> = [Boolean,47,56,63]; ]
+function testGetDisplayNameB5(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_47_64_50_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 48 4 ]
+    symbol [ Test %tmp.1 48 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 48 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 48 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getDisplayName %tmp.5 48 30 44 ];
+    %tmp.5 = getv function %tmp.4 :getDisplayName;
+    %tmp.6 = 35;
+    %tmp.7 = invoke %tmp.4 %tmp.5(%tmp.6);
+    %tmp.8 = "B5";
+    invoke %tmp.1 %tmp.2(%tmp.7, %tmp.8);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 49 4 ]
+    %tmp.9 = true;
+    ret %tmp.9;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_47_64_50_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 53; test = true; @symbol_functiondef = [testNoteCount,53,9,22]; @symbol_param<0> = [logger,53,23,29]; @symbol_param<0>_type<0> = [Test,53,33,37]; @symbol_param<0>_type<1> = [Logger,53,38,44]; @symbol_return<0> = [Boolean,53,49,56]; ]
+function testNoteCount(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_53_57_56_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 54 4 ]
+    symbol [ Test %tmp.1 54 4 8 ];
+    %tmp.1 = getm $.Toybox.Test;
+    symbol [ assertEqual %tmp.2 54 9 20 ];
+    %tmp.2 = getv function %tmp.1 :assertEqual;
+    symbol [ NoteData %tmp.4 54 21 29 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getNoteCount %tmp.5 54 30 42 ];
+    %tmp.5 = getv function %tmp.4 :getNoteCount;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = 36;
+    invoke %tmp.1 %tmp.2(%tmp.6, %tmp.7);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 55 4 ]
+    %tmp.8 = true;
+    ret %tmp.8;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_53_57_56_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 59; test = true; @symbol_functiondef = [testAllFrequenciesInRange,59,9,34]; @symbol_param<0> = [logger,59,35,41]; @symbol_param<0>_type<0> = [Test,59,45,49]; @symbol_param<0>_type<1> = [Logger,59,50,56]; @symbol_return<0> = [Boolean,59,61,68]; ]
+function testAllFrequenciesInRange(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_59_69_68_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 60 4 ]
+    for @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_test @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_incr @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_init:
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_begin" "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_end" ]
+    %i.1 = local;
+    symbol [ i %i.1 60 13 14 ];
+    %tmp.1 = 0;
+    lputv %i.1 %tmp.1;
+    symbol [ i %i.1 60 13 14 ];
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_test:
+    %tmp.2 = lgetv %i.1;
+    symbol [ i %tmp.2 60 20 21 ];
+    symbol [ NoteData %tmp.4 60 24 32 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getNoteCount %tmp.5 60 33 45 ];
+    %tmp.5 = getv function %tmp.4 :getNoteCount;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = lt %tmp.2 %tmp.6;
+    bf %tmp.7 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_begin:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_54_66_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 61 8 ]
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_54_66_4_start" "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_54_66_4_stop" ]
+    %freq.2 = local;
+    symbol [ freq %freq.2 61 12 16 ];
+    symbol [ NoteData %tmp.9 61 19 27 ];
+    %tmp.9 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.10 61 28 40 ];
+    %tmp.10 = getv function %tmp.9 :getFrequency;
+    %tmp.11 = lgetv %i.1;
+    symbol [ i %tmp.11 61 41 42 ];
+    %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+    lputv %freq.2 %tmp.12;
+    symbol [ freq %freq.2 61 12 16 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 62 8 ]
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_stmt:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_12_62_32_begin:
+    %tmp.13 = lgetv %freq.2;
+    symbol [ freq %tmp.13 62 12 16 ];
+    %tmp.14 = 50;
+    %tmp.15 = lt %tmp.13 %tmp.14;
+    bt %tmp.15 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_true;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_25_62_32_false:
+    %tmp.16 = lgetv %freq.2;
+    symbol [ freq %tmp.16 62 25 29 ];
+    %tmp.17 = 4000;
+    %tmp.18 = gt %tmp.16 %tmp.17;
+    push %tmp.18;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_25_62_32_end:
+    %tmp.19 = phi [%tmp.15 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_12_62_32_begin] [%tmp.18 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_25_62_32_false] [%tmp.19 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_25_62_32_end];
+    bf %tmp.19 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_38_65_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 63 12 ]
+    %tmp.20 = lgetv %logger;
+    symbol [ logger %tmp.20 63 12 18 ];
+    symbol [ error %tmp.21 63 19 24 ];
+    %tmp.21 = getv function %tmp.20 :error;
+    %tmp.22 = "Frequency out of range at index ";
+    %tmp.23 = lgetv %i.1;
+    symbol [ i %tmp.23 63 62 63 ];
+    %tmp.24 = add %tmp.22 %tmp.23;
+    %tmp.25 = ": ";
+    %tmp.26 = add %tmp.24 %tmp.25;
+    %tmp.27 = lgetv %freq.2;
+    symbol [ freq %tmp.27 63 73 77 ];
+    %tmp.28 = add %tmp.26 %tmp.27;
+    invoke %tmp.20 %tmp.21(%tmp.28);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 64 12 ]
+    %tmp.29 = false;
+    ret %tmp.29;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_38_65_8_stop:
+    goto @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_62_8_65_8_if_end:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_54_66_4_stop:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_incr:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 60 ]
+    %tmp.32 = lgetv %i.1;
+    symbol [ i %tmp.32 60 49 50 ];
+    %tmp.33 = add %tmp.32 1;
+    lputv %i.1 %tmp.33;
+    symbol [ i %i.1 60 49 50 ];
+    goto @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_test;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_60_4_66_4_for_end:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 67 4 ]
+    %tmp.34 = true;
+    ret %tmp.34;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_59_69_68_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 71; test = true; @symbol_functiondef = [testFrequenciesAscending,71,9,33]; @symbol_param<0> = [logger,71,34,40]; @symbol_param<0>_type<0> = [Test,71,44,48]; @symbol_param<0>_type<1> = [Logger,71,49,55]; @symbol_return<0> = [Boolean,71,60,67]; ]
+function testFrequenciesAscending(logger as Test.Logger) as Boolean {
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_71_68_79_0_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 72 4 ]
+    for @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_test @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_incr @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_init:
+    [ "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_begin" "_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_end" ]
+    %i.1 = local;
+    symbol [ i %i.1 72 13 14 ];
+    %tmp.1 = 1;
+    lputv %i.1 %tmp.1;
+    symbol [ i %i.1 72 13 14 ];
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_test:
+    %tmp.2 = lgetv %i.1;
+    symbol [ i %tmp.2 72 20 21 ];
+    symbol [ NoteData %tmp.4 72 24 32 ];
+    %tmp.4 = getv ? :NoteData;
+    symbol [ getNoteCount %tmp.5 72 33 45 ];
+    %tmp.5 = getv function %tmp.4 :getNoteCount;
+    %tmp.6 = invoke %tmp.4 %tmp.5();
+    %tmp.7 = lt %tmp.2 %tmp.6;
+    bf %tmp.7 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_begin:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_54_77_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 73 8 ]
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_8_76_8_if_stmt:
+    symbol [ NoteData %tmp.9 73 12 20 ];
+    %tmp.9 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.10 73 21 33 ];
+    %tmp.10 = getv function %tmp.9 :getFrequency;
+    %tmp.11 = lgetv %i.1;
+    symbol [ i %tmp.11 73 34 35 ];
+    %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+    symbol [ NoteData %tmp.14 73 40 48 ];
+    %tmp.14 = getv ? :NoteData;
+    symbol [ getFrequency %tmp.15 73 49 61 ];
+    %tmp.15 = getv function %tmp.14 :getFrequency;
+    %tmp.16 = lgetv %i.1;
+    symbol [ i %tmp.16 73 62 63 ];
+    %tmp.17 = 1;
+    %tmp.18 = sub %tmp.16 %tmp.17;
+    %tmp.19 = invoke %tmp.14 %tmp.15(%tmp.18);
+    %tmp.20 = lte %tmp.12 %tmp.19;
+    bf %tmp.20 @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_8_76_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_8_76_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_70_76_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 74 12 ]
+    %tmp.21 = lgetv %logger;
+    symbol [ logger %tmp.21 74 12 18 ];
+    symbol [ error %tmp.22 74 19 24 ];
+    %tmp.22 = getv function %tmp.21 :error;
+    %tmp.23 = "Frequency not ascending at index ";
+    %tmp.24 = lgetv %i.1;
+    symbol [ i %tmp.24 74 63 64 ];
+    %tmp.25 = add %tmp.23 %tmp.24;
+    invoke %tmp.21 %tmp.22(%tmp.25);
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 75 12 ]
+    %tmp.26 = false;
+    ret %tmp.26;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_70_76_8_stop:
+    goto @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_8_76_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_73_8_76_8_if_end:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_54_77_4_stop:
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_incr:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 72 ]
+    %tmp.29 = lgetv %i.1;
+    symbol [ i %tmp.29 72 49 50 ];
+    %tmp.30 = add %tmp.29 1;
+    lputv %i.1 %tmp.30;
+    symbol [ i %i.1 72 49 50 ];
+    goto @_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_test;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_72_4_77_4_for_end:
+[ "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc" 78 4 ]
+    %tmp.31 = true;
+    ret %tmp.31;
+_Users_hookline_coding_projects_pitch_pipe_test_TestNoteData_mc_71_68_79_0_stop:
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/test/TestNoteData.mc"; @line = 1; ]
+<init> {
+}

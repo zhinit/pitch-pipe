@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/hookline/coding/projects/pitch-pipe/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="1" lineNum="5" parent="globals/PitchPipeApp" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="2" lineNum="4" parent="globals/PitchPipeDelegate" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="3" lineNum="5" parent="globals/PitchPipeView" pc="268435498" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="3" lineNum="17" parent="globals/PitchPipeView" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="3" lineNum="20" parent="globals/PitchPipeView" pc="268435686" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/bin/gen/006-B3077-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435857" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="5" lineNum="5" parent="globals/NoteData" pc="268435881" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="5" lineNum="15" parent="globals/NoteData" pc="268436051" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="6" lineNum="11" parent="globals/NoteSelector" pc="268436534" symbol="next"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="6" lineNum="12" parent="globals/NoteSelector" pc="268436536" symbol="next"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="6" lineNum="13" parent="globals/NoteSelector" pc="268436555" symbol="next"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="6" lineNum="14" parent="globals/NoteSelector" pc="268436582" symbol="next"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="7" lineNum="18" parent="globals/NoteSelector" pc="268436599" symbol="previous"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="7" lineNum="19" parent="globals/NoteSelector" pc="268436601" symbol="previous"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="7" lineNum="20" parent="globals/NoteSelector" pc="268436620" symbol="previous"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="7" lineNum="21" parent="globals/NoteSelector" pc="268436637" symbol="previous"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="8" lineNum="29" parent="globals/NoteSelector" pc="268436670" symbol="setIndex"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="8" lineNum="30" parent="globals/NoteSelector" pc="268436672" symbol="setIndex"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="9" lineNum="25" parent="globals/NoteSelector" pc="268436683" symbol="getCurrentIndex"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="9" lineNum="26" parent="globals/NoteSelector" pc="268436685" symbol="getCurrentIndex"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="10" lineNum="7" parent="globals/NoteSelector" pc="268436694" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" id="10" lineNum="8" parent="globals/NoteSelector" pc="268436696" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="11" lineNum="11" parent="globals/PitchPipeApp" pc="268436710" symbol="onStart"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="12" lineNum="17" parent="globals/PitchPipeApp" pc="268436713" symbol="getInitialView"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="12" lineNum="18" parent="globals/PitchPipeApp" pc="268436717" symbol="getInitialView"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="12" lineNum="19" parent="globals/PitchPipeApp" pc="268436741" symbol="getInitialView"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="12" lineNum="20" parent="globals/PitchPipeApp" pc="268436765" symbol="getInitialView"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="13" lineNum="7" parent="globals/PitchPipeApp" pc="268436840" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="13" lineNum="8" parent="globals/PitchPipeApp" pc="268436842" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeApp.mc" id="14" lineNum="14" parent="globals/PitchPipeApp" pc="268436861" symbol="onStop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="31" parent="globals/PitchPipeDelegate" pc="268436864" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="32" parent="globals/PitchPipeDelegate" pc="268436866" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="33" parent="globals/PitchPipeDelegate" pc="268436884" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="34" parent="globals/PitchPipeDelegate" pc="268436904" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="36" parent="globals/PitchPipeDelegate" pc="268436957" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="15" lineNum="37" parent="globals/PitchPipeDelegate" pc="268436973" symbol="onPreviousPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="16" lineNum="9" parent="globals/PitchPipeDelegate" pc="268436976" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="16" lineNum="10" parent="globals/PitchPipeDelegate" pc="268436978" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="16" lineNum="11" parent="globals/PitchPipeDelegate" pc="268436996" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="16" lineNum="12" parent="globals/PitchPipeDelegate" pc="268437006" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="17" lineNum="15" parent="globals/PitchPipeDelegate" pc="268437017" symbol="onSelect"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="17" lineNum="16" parent="globals/PitchPipeDelegate" pc="268437021" symbol="onSelect"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="17" lineNum="17" parent="globals/PitchPipeDelegate" pc="268437055" symbol="onSelect"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="17" lineNum="18" parent="globals/PitchPipeDelegate" pc="268437075" symbol="onSelect"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="17" lineNum="19" parent="globals/PitchPipeDelegate" pc="268437091" symbol="onSelect"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="22" parent="globals/PitchPipeDelegate" pc="268437094" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="23" parent="globals/PitchPipeDelegate" pc="268437096" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="24" parent="globals/PitchPipeDelegate" pc="268437114" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="25" parent="globals/PitchPipeDelegate" pc="268437134" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="27" parent="globals/PitchPipeDelegate" pc="268437187" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeDelegate.mc" id="18" lineNum="28" parent="globals/PitchPipeDelegate" pc="268437203" symbol="onNextPage"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="19" lineNum="123" parent="globals/PitchPipeView" pc="268437206" symbol="&lt;globals/PitchPipeView/&lt;&gt;prevIndex&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="19" lineNum="124" parent="globals/PitchPipeView" pc="268437208" symbol="&lt;globals/PitchPipeView/&lt;&gt;prevIndex&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="30" parent="globals/PitchPipeView" pc="268437252" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="31" parent="globals/PitchPipeView" pc="268437256" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="32" parent="globals/PitchPipeView" pc="268437269" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="33" parent="globals/PitchPipeView" pc="268437282" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="34" parent="globals/PitchPipeView" pc="268437298" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="36" parent="globals/PitchPipeView" pc="268437314" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="37" parent="globals/PitchPipeView" pc="268437332" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="38" parent="globals/PitchPipeView" pc="268437363" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="40" parent="globals/PitchPipeView" pc="268437388" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="41" parent="globals/PitchPipeView" pc="268437410" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="21" lineNum="42" parent="globals/PitchPipeView" pc="268437423" symbol="onLayout"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="22" lineNum="119" parent="globals/PitchPipeView" pc="268437457" symbol="&lt;globals/PitchPipeView/&lt;&gt;nextIndex&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="22" lineNum="120" parent="globals/PitchPipeView" pc="268437459" symbol="&lt;globals/PitchPipeView/&lt;&gt;nextIndex&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="102" parent="globals/PitchPipeView" pc="268437484" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="103" parent="globals/PitchPipeView" pc="268437488" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="104" parent="globals/PitchPipeView" pc="268437506" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="105" parent="globals/PitchPipeView" pc="268437534" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="106" parent="globals/PitchPipeView" pc="268437562" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="107" parent="globals/PitchPipeView" pc="268437575" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="109" parent="globals/PitchPipeView" pc="268437588" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="110" parent="globals/PitchPipeView" pc="268437596" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="111" parent="globals/PitchPipeView" pc="268437631" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="113" parent="globals/PitchPipeView" pc="268437655" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="23" lineNum="114" parent="globals/PitchPipeView" pc="268437677" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="24" lineNum="24" parent="globals/PitchPipeView" pc="268437712" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="24" lineNum="25" parent="globals/PitchPipeView" pc="268437714" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="24" lineNum="26" parent="globals/PitchPipeView" pc="268437732" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="24" lineNum="27" parent="globals/PitchPipeView" pc="268437742" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="25" lineNum="82" parent="globals/PitchPipeView" pc="268437753" symbol="onHide"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="25" lineNum="83" parent="globals/PitchPipeView" pc="268437755" symbol="onHide"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="48" parent="globals/PitchPipeView" pc="268437774" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="49" parent="globals/PitchPipeView" pc="268437778" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="50" parent="globals/PitchPipeView" pc="268437797" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="51" parent="globals/PitchPipeView" pc="268437816" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="53" parent="globals/PitchPipeView" pc="268437826" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="54" parent="globals/PitchPipeView" pc="268437848" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="56" parent="globals/PitchPipeView" pc="268437860" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="58" parent="globals/PitchPipeView" pc="268437878" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="59" parent="globals/PitchPipeView" pc="268437898" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="60" parent="globals/PitchPipeView" pc="268437917" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="67" parent="globals/PitchPipeView" pc="268437972" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="68" parent="globals/PitchPipeView" pc="268437994" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="69" parent="globals/PitchPipeView" pc="268438019" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="70" parent="globals/PitchPipeView" pc="268438040" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="72" parent="globals/PitchPipeView" pc="268438050" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="26" lineNum="79" parent="globals/PitchPipeView" pc="268438090" symbol="onUpdate"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="27" lineNum="86" parent="globals/PitchPipeView" pc="268438107" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="27" lineNum="87" parent="globals/PitchPipeView" pc="268438109" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="27" lineNum="88" parent="globals/PitchPipeView" pc="268438131" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" id="27" lineNum="94" parent="globals/PitchPipeView" pc="268438197" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="14" parent="globals/TonePlayer" pc="268438264" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="15" parent="globals/TonePlayer" pc="268438268" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="16" parent="globals/TonePlayer" pc="268438280" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="18" parent="globals/TonePlayer" pc="268438284" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="19" parent="globals/TonePlayer" pc="268438294" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="20" parent="globals/TonePlayer" pc="268438304" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="28" lineNum="21" parent="globals/TonePlayer" pc="268438339" symbol="play"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="29" lineNum="40" parent="globals/TonePlayer" pc="268438386" symbol="isPlaying"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="29" lineNum="41" parent="globals/TonePlayer" pc="268438388" symbol="isPlaying"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="30" lineNum="24" parent="globals/TonePlayer" pc="268438397" symbol="stop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="30" lineNum="25" parent="globals/TonePlayer" pc="268438401" symbol="stop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="30" lineNum="26" parent="globals/TonePlayer" pc="268438423" symbol="stop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="30" lineNum="27" parent="globals/TonePlayer" pc="268438461" symbol="stop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="30" lineNum="29" parent="globals/TonePlayer" pc="268438510" symbol="stop"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="31" lineNum="32" parent="globals/TonePlayer" pc="268438521" symbol="toggle"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="31" lineNum="33" parent="globals/TonePlayer" pc="268438523" symbol="toggle"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="31" lineNum="34" parent="globals/TonePlayer" pc="268438548" symbol="toggle"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="31" lineNum="36" parent="globals/TonePlayer" pc="268438563" symbol="toggle"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="32" lineNum="10" parent="globals/TonePlayer" pc="268438578" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="32" lineNum="11" parent="globals/TonePlayer" pc="268438580" symbol="initialize"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="33" lineNum="44" parent="globals/TonePlayer" pc="268438619" symbol="hasToneSupport"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/TonePlayer.mc" id="33" lineNum="45" parent="globals/TonePlayer" pc="268438621" symbol="hasToneSupport"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="34" lineNum="42" parent="globals/NoteData" pc="268438630" symbol="getDisplayName"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="34" lineNum="43" parent="globals/NoteData" pc="268438640" symbol="getDisplayName"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="35" lineNum="30" parent="globals/NoteData" pc="268438677" symbol="getNoteName"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="35" lineNum="31" parent="globals/NoteData" pc="268438687" symbol="getNoteName"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="36" lineNum="38" parent="globals/NoteData" pc="268438705" symbol="getFrequency"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="36" lineNum="39" parent="globals/NoteData" pc="268438715" symbol="getFrequency"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="37" lineNum="34" parent="globals/NoteData" pc="268438727" symbol="getOctave"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="37" lineNum="35" parent="globals/NoteData" pc="268438737" symbol="getOctave"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="38" lineNum="46" parent="globals/NoteData" pc="268438752" symbol="getNoteCount"/>
+        <entry filename="/Users/hookline/coding/projects/pitch-pipe/source/NoteData.mc" id="38" lineNum="47" parent="globals/NoteData" pc="268438762" symbol="getNoteCount"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="42" method="true" symbol="getNoteCount"/>
+        <entry field="true" id="39" symbol="NOTE_NAMES"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="34" symbol="&lt;globals/TonePlayer/&lt;&gt;_isPlaying&gt;"/>
+        <entry id="30" method="true" symbol="&lt;globals/PitchPipeView/&lt;&gt;nextIndex&gt;"/>
+        <entry id="8388826" method="true" symbol="next"/>
+        <entry field="true" id="15" symbol="&lt;globals/PitchPipeDelegate/&lt;&gt;_player&gt;"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8388649" module="true" object="true" symbol="Test"/>
+        <entry field="true" id="24" symbol="&lt;globals/PitchPipeView/&lt;&gt;_hintUpY&gt;"/>
+        <entry field="true" id="46" symbol="AppName"/>
+        <entry id="41" method="true" symbol="getFrequency"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="37" method="true" symbol="toggle"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="26" symbol="&lt;globals/PitchPipeView/&lt;&gt;_player&gt;"/>
+        <entry id="40" method="true" symbol="getDisplayName"/>
+        <entry field="true" id="25" symbol="&lt;globals/PitchPipeView/&lt;&gt;_noteY&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="27" symbol="&lt;globals/PitchPipeView/&lt;&gt;_selector&gt;"/>
+        <entry field="true" id="12" symbol="&lt;globals/NoteSelector/&lt;&gt;_currentIndex&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="13" method="true" symbol="getCurrentIndex"/>
+        <entry id="8391338" symbol="toneProfile"/>
+        <entry field="true" id="23" symbol="&lt;globals/PitchPipeView/&lt;&gt;_hintDownY&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="28" method="true" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;"/>
+        <entry id="8389079" method="true" symbol="onPreviousPage"/>
+        <entry id="29" method="true" symbol="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;"/>
+        <entry id="8391275" object="true" symbol="ToneProfile"/>
+        <entry id="8391298" method="true" symbol="play"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="21" symbol="&lt;globals/PitchPipeView/&lt;&gt;_centerY&gt;"/>
+        <entry field="true" id="20" symbol="&lt;globals/PitchPipeView/&lt;&gt;_centerX&gt;"/>
+        <entry id="7" object="true" symbol="NoteSelector"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="8388699" method="true" symbol="stop"/>
+        <entry id="9" object="true" symbol="PitchPipeDelegate"/>
+        <entry id="31" method="true" symbol="&lt;globals/PitchPipeView/&lt;&gt;prevIndex&gt;"/>
+        <entry field="true" id="38" symbol="FREQUENCIES"/>
+        <entry id="8388985" method="true" symbol="playTone"/>
+        <entry id="44" method="true" symbol="getOctave"/>
+        <entry field="true" id="17" symbol="&lt;globals/PitchPipeView/&lt;&gt;COS_TABLE&gt;"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="14" method="true" symbol="setIndex"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="45" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="35" method="true" symbol="hasToneSupport"/>
+        <entry id="8390370" method="true" symbol="previous"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="32" symbol="&lt;globals/TonePlayer/&lt;&gt;_currentFreq&gt;"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8" object="true" symbol="PitchPipeApp"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="6" module="true" symbol="NoteData"/>
+        <entry field="true" id="33" symbol="&lt;globals/TonePlayer/&lt;&gt;_hasTone&gt;"/>
+        <entry field="true" id="22" symbol="&lt;globals/PitchPipeView/&lt;&gt;_freqY&gt;"/>
+        <entry id="11" object="true" symbol="TonePlayer"/>
+        <entry id="43" method="true" symbol="getNoteName"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="18" symbol="&lt;globals/PitchPipeView/&lt;&gt;SIN_TABLE&gt;"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="19" symbol="&lt;globals/PitchPipeView/&lt;&gt;_arcRadius&gt;"/>
+        <entry id="36" method="true" symbol="isPlaying"/>
+        <entry id="2" module="true" symbol="globals/NoteData"/>
+        <entry id="8388636" module="true" symbol="Attention"/>
+        <entry id="10" object="true" symbol="PitchPipeView"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8389078" method="true" symbol="onNextPage"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="16" symbol="&lt;globals/PitchPipeDelegate/&lt;&gt;_selector&gt;"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436682" name="index" stackId="1" startPc="268436670"/>
+        <entry endPc="268436839" name="selector" stackId="1" startPc="268436717"/>
+        <entry endPc="268436839" name="player" stackId="2" startPc="268436717"/>
+        <entry arg="true" endPc="268437016" name="selector" stackId="1" startPc="268436976"/>
+        <entry arg="true" endPc="268437016" name="player" stackId="2" startPc="268436976"/>
+        <entry endPc="268437093" name="freq" stackId="1" startPc="268437021"/>
+        <entry arg="true" endPc="268437251" name="index" stackId="1" startPc="268437206"/>
+        <entry arg="true" endPc="268437456" name="dc" stackId="1" startPc="268437252"/>
+        <entry endPc="268437455" name="w" stackId="2" startPc="268437256"/>
+        <entry endPc="268437455" name="h" stackId="3" startPc="268437256"/>
+        <entry endPc="268437455" name="noteHeight" stackId="4" startPc="268437256"/>
+        <entry arg="true" endPc="268437483" name="index" stackId="1" startPc="268437457"/>
+        <entry arg="true" endPc="268437711" name="dc" stackId="1" startPc="268437484"/>
+        <entry arg="true" endPc="268437711" name="noteInOctave" stackId="2" startPc="268437484"/>
+        <entry arg="true" endPc="268437711" name="playing" stackId="3" startPc="268437484"/>
+        <entry endPc="268437710" name="i" stackId="4" startPc="268437506"/>
+        <entry endPc="268437697" name="dx" stackId="5" startPc="268437506"/>
+        <entry endPc="268437697" name="dy" stackId="6" startPc="268437506"/>
+        <entry endPc="268437697" name="px" stackId="7" startPc="268437506"/>
+        <entry endPc="268437697" name="py" stackId="8" startPc="268437506"/>
+        <entry arg="true" endPc="268437752" name="selector" stackId="1" startPc="268437712"/>
+        <entry arg="true" endPc="268437752" name="player" stackId="2" startPc="268437712"/>
+        <entry arg="true" endPc="268438106" name="dc" stackId="1" startPc="268437774"/>
+        <entry endPc="268438105" name="index" stackId="2" startPc="268437778"/>
+        <entry endPc="268438105" name="playing" stackId="3" startPc="268437778"/>
+        <entry endPc="268438105" name="noteInOctave" stackId="4" startPc="268437778"/>
+        <entry endPc="268438105" name="noteColor" stackId="5" startPc="268437778"/>
+        <entry endPc="268438105" name="freqText" stackId="6" startPc="268437778"/>
+        <entry arg="true" endPc="268438263" name="dc" stackId="1" startPc="268438107"/>
+        <entry arg="true" endPc="268438263" name="index" stackId="2" startPc="268438107"/>
+        <entry arg="true" endPc="268438385" name="freq" stackId="1" startPc="268438264"/>
+        <entry endPc="268438384" name="tone" stackId="2" startPc="268438268"/>
+        <entry endPc="268438506" name="cancel" stackId="1" startPc="268438423"/>
+        <entry arg="true" endPc="268438577" name="freq" stackId="1" startPc="268438521"/>
+        <entry arg="true" endPc="268438676" name="index" stackId="1" startPc="268438630"/>
+        <entry arg="true" endPc="268438704" name="index" stackId="1" startPc="268438677"/>
+        <entry arg="true" endPc="268438726" name="index" stackId="1" startPc="268438705"/>
+        <entry arg="true" endPc="268438751" name="index" stackId="1" startPc="268438727"/>
+    </localVars>
+    <deviceInfo deviceVersion="3cbcff5b61d759a7585c5fa7606e74c0bd5dfa74" partNumber="006-B3077-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="63" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/NoteSelector" offset="158" parentId="globals" symbolId="NoteSelector" type="class"/>
+        <dataEntry label="globals/PitchPipeApp" offset="245" parentId="globals" symbolId="PitchPipeApp" type="class"/>
+        <dataEntry label="globals/PitchPipeDelegate" offset="316" parentId="globals" symbolId="PitchPipeDelegate" type="class"/>
+        <dataEntry label="globals/PitchPipeView" offset="403" parentId="globals" symbolId="PitchPipeView" type="class"/>
+        <dataEntry label="globals/Rez" offset="602" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/TonePlayer" offset="649" parentId="globals" symbolId="TonePlayer" type="class"/>
+        <dataEntry label="globals/NoteData" offset="760" parentId="globals" symbolId="NoteData" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="847" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="886" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="NoteSelector">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="PitchPipeApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435497" name="&lt;init&gt;" parent="PitchPipeDelegate" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435856" name="&lt;init&gt;" parent="PitchPipeView" startPc="268435498">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435880" name="&lt;init&gt;" parent="Rez" startPc="268435857">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="TonePlayer">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436533" name="&lt;init&gt;" parent="NoteData" startPc="268435881">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436598" name="next" parent="NoteSelector" startPc="268436534">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436669" name="previous" parent="NoteSelector" startPc="268436599">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436682" name="setIndex" parent="NoteSelector" startPc="268436670">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436693" name="getCurrentIndex" parent="NoteSelector" startPc="268436683">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436709" name="initialize" parent="NoteSelector" startPc="268436694">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436712" name="onStart" parent="PitchPipeApp" startPc="268436710">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436839" name="getInitialView" parent="PitchPipeApp" startPc="268436713">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436860" name="initialize" parent="PitchPipeApp" startPc="268436840">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436863" name="onStop" parent="PitchPipeApp" startPc="268436861">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436975" name="onPreviousPage" parent="PitchPipeDelegate" startPc="268436864">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437016" name="initialize" parent="PitchPipeDelegate" startPc="268436976">
+            <param id="selector"/>
+            <param id="player"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437093" name="onSelect" parent="PitchPipeDelegate" startPc="268437017">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437205" name="onNextPage" parent="PitchPipeDelegate" startPc="268437094">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437251" name="&lt;globals/PitchPipeView/&lt;&gt;prevIndex&gt;" parent="PitchPipeView" startPc="268437206">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="PitchPipeView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437456" name="onLayout" parent="PitchPipeView" startPc="268437252">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437483" name="&lt;globals/PitchPipeView/&lt;&gt;nextIndex&gt;" parent="PitchPipeView" startPc="268437457">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437711" name="&lt;globals/PitchPipeView/&lt;&gt;drawNoteArc&gt;" parent="PitchPipeView" startPc="268437484">
+            <param id="dc"/>
+            <param id="noteInOctave"/>
+            <param id="playing"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437752" name="initialize" parent="PitchPipeView" startPc="268437712">
+            <param id="selector"/>
+            <param id="player"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437773" name="onHide" parent="PitchPipeView" startPc="268437753">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438106" name="onUpdate" parent="PitchPipeView" startPc="268437774">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438263" name="&lt;globals/PitchPipeView/&lt;&gt;drawHints&gt;" parent="PitchPipeView" startPc="268438107">
+            <param id="dc"/>
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438385" name="play" parent="TonePlayer" startPc="268438264">
+            <param id="freq"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438396" name="isPlaying" parent="TonePlayer" startPc="268438386">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438520" name="stop" parent="TonePlayer" startPc="268438397">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438577" name="toggle" parent="TonePlayer" startPc="268438521">
+            <param id="freq"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438618" name="initialize" parent="TonePlayer" startPc="268438578">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438629" name="hasToneSupport" parent="TonePlayer" startPc="268438619">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438676" name="getDisplayName" parent="NoteData" startPc="268438630">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438704" name="getNoteName" parent="NoteData" startPc="268438677">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438726" name="getFrequency" parent="NoteData" startPc="268438705">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438751" name="getOctave" parent="NoteData" startPc="268438727">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438767" name="getNoteCount" parent="NoteData" startPc="268438752">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

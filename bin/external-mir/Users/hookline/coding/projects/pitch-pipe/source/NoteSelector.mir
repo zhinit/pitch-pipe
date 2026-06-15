@@ -1,0 +1,113 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 3; @symbol_classdef = [NoteSelector,3,6,18]; ]
+class NoteSelector {
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 3; ]
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 5; @position = 16; @symbol_vardef = [_currentIndex,5,16,29]; @symbol_type<0> = [Number,5,33,39]; ]
+    private
+    var _currentIndex as Number;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_7_26_9_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 8 8 ]
+        symbol [ NoteData %tmp.2 8 24 32 ];
+        %tmp.2 = getv ? :NoteData;
+        symbol [ A4_INDEX %tmp.3 8 33 41 ];
+        %tmp.3 = getv %tmp.2 :A4_INDEX;
+        symbol [ _currentIndex ? 8 8 21 ];
+        putv self :_currentIndex %tmp.3;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_7_26_9_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 11; @symbol_functiondef = [next,11,13,17]; ]
+    function next() as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_11_28_16_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 12 8 ]
+        symbol [ _currentIndex %tmp.3 12 8 21 ];
+        %tmp.3 = getv ? :_currentIndex;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ _currentIndex ? 12 8 21 ];
+        putv self :_currentIndex dup %tmp.4;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 13 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_8_15_8_if_stmt:
+        symbol [ _currentIndex %tmp.6 13 12 25 ];
+        %tmp.6 = getv ? :_currentIndex;
+        symbol [ NoteData %tmp.8 13 29 37 ];
+        %tmp.8 = getv ? :NoteData;
+        symbol [ getNoteCount %tmp.9 13 38 50 ];
+        %tmp.9 = getv function %tmp.8 :getNoteCount;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = gte %tmp.6 %tmp.10;
+        bf %tmp.11 @_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_8_15_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_8_15_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_54_15_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 14 12 ]
+        %tmp.12 = 0;
+        symbol [ _currentIndex ? 14 12 25 ];
+        putv self :_currentIndex %tmp.12;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_54_15_8_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_8_15_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_13_8_15_8_if_end:
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_11_28_16_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 18; @symbol_functiondef = [previous,18,13,21]; ]
+    function previous() as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_18_32_23_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 19 8 ]
+        symbol [ _currentIndex %tmp.3 19 8 21 ];
+        %tmp.3 = getv ? :_currentIndex;
+        %tmp.4 = sub %tmp.3 1;
+        symbol [ _currentIndex ? 19 8 21 ];
+        putv self :_currentIndex dup %tmp.4;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 20 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_8_22_8_if_stmt:
+        symbol [ _currentIndex %tmp.6 20 12 25 ];
+        %tmp.6 = getv ? :_currentIndex;
+        %tmp.7 = 0;
+        %tmp.8 = lt %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_8_22_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_8_22_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_31_22_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 21 12 ]
+        symbol [ NoteData %tmp.10 21 28 36 ];
+        %tmp.10 = getv ? :NoteData;
+        symbol [ getNoteCount %tmp.11 21 37 49 ];
+        %tmp.11 = getv function %tmp.10 :getNoteCount;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = 1;
+        %tmp.14 = sub %tmp.12 %tmp.13;
+        symbol [ _currentIndex ? 21 12 25 ];
+        putv self :_currentIndex %tmp.14;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_31_22_8_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_8_22_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_20_8_22_8_if_end:
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_18_32_23_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 25; @symbol_functiondef = [getCurrentIndex,25,13,28]; @symbol_return<0> = [Number,25,34,40]; ]
+    function getCurrentIndex() as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_25_41_27_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 26 8 ]
+        symbol [ _currentIndex %tmp.2 26 15 28 ];
+        %tmp.2 = getv ? :_currentIndex;
+        ret %tmp.2;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_25_41_27_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 29; @symbol_functiondef = [setIndex,29,13,21]; @symbol_param<0> = [index,29,22,27]; @symbol_param<0>_type<0> = [Number,29,31,37]; ]
+    function setIndex(index as Number) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_29_47_31_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc" 30 8 ]
+        %tmp.1 = lgetv %index;
+        symbol [ index %tmp.1 30 24 29 ];
+        symbol [ _currentIndex ? 30 8 21 ];
+        putv self :_currentIndex %tmp.1;
+_Users_hookline_coding_projects_pitch_pipe_source_NoteSelector_mc_29_47_31_4_stop:
+    }
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/NoteSelector.mc"; @line = 1; ]
+<init> {
+}

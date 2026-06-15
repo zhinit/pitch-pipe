@@ -1,0 +1,763 @@
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 5; @symbol_classdef = [PitchPipeView,5,6,19]; @symbol_extends<0> = [WatchUi,5,28,35]; @symbol_extends<1> = [View,5,36,40]; ]
+class PitchPipeView extends WatchUi.View {
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 5; ]
+    <init> {
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 17 18 ]
+        %tmp.1 = newa 12;
+        %tmp.2 = 0;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 500;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = 866;
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = 1000;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = 866;
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = 500;
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = 0;
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = -500;
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = -866;
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = -1000;
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = -866;
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = -500;
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        putv self :COS_TABLE %tmp.37;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 20 18 ]
+        %tmp.38 = newa 12;
+        %tmp.39 = 1000;
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 0 %tmp.39;
+        %tmp.42 = 866;
+        %tmp.43 = dup %tmp.41;
+        %tmp.44 = aputv %tmp.43 1 %tmp.42;
+        %tmp.45 = 500;
+        %tmp.46 = dup %tmp.44;
+        %tmp.47 = aputv %tmp.46 2 %tmp.45;
+        %tmp.48 = 0;
+        %tmp.49 = dup %tmp.47;
+        %tmp.50 = aputv %tmp.49 3 %tmp.48;
+        %tmp.51 = -500;
+        %tmp.52 = dup %tmp.50;
+        %tmp.53 = aputv %tmp.52 4 %tmp.51;
+        %tmp.54 = -866;
+        %tmp.55 = dup %tmp.53;
+        %tmp.56 = aputv %tmp.55 5 %tmp.54;
+        %tmp.57 = -1000;
+        %tmp.58 = dup %tmp.56;
+        %tmp.59 = aputv %tmp.58 6 %tmp.57;
+        %tmp.60 = -866;
+        %tmp.61 = dup %tmp.59;
+        %tmp.62 = aputv %tmp.61 7 %tmp.60;
+        %tmp.63 = -500;
+        %tmp.64 = dup %tmp.62;
+        %tmp.65 = aputv %tmp.64 8 %tmp.63;
+        %tmp.66 = 0;
+        %tmp.67 = dup %tmp.65;
+        %tmp.68 = aputv %tmp.67 9 %tmp.66;
+        %tmp.69 = 500;
+        %tmp.70 = dup %tmp.68;
+        %tmp.71 = aputv %tmp.70 10 %tmp.69;
+        %tmp.72 = 866;
+        %tmp.73 = dup %tmp.71;
+        %tmp.74 = aputv %tmp.73 11 %tmp.72;
+        putv self :SIN_TABLE %tmp.74;
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 7; @position = 16; @symbol_vardef = [_selector,7,16,25]; @symbol_type<0> = [NoteSelector,7,29,41]; ]
+    private
+    var _selector as NoteSelector;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 8; @position = 16; @symbol_vardef = [_player,8,16,23]; @symbol_type<0> = [TonePlayer,8,27,37]; ]
+    private
+    var _player as TonePlayer;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 9; @position = 16; @symbol_vardef = [_centerX,9,16,24]; @symbol_type<0> = [Number,9,28,34]; ]
+    private
+    var _centerX as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 10; @position = 16; @symbol_vardef = [_centerY,10,16,24]; @symbol_type<0> = [Number,10,28,34]; ]
+    private
+    var _centerY as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 11; @position = 16; @symbol_vardef = [_noteY,11,16,22]; @symbol_type<0> = [Number,11,26,32]; ]
+    private
+    var _noteY as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 12; @position = 16; @symbol_vardef = [_freqY,12,16,22]; @symbol_type<0> = [Number,12,26,32]; ]
+    private
+    var _freqY as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 13; @position = 16; @symbol_vardef = [_arcRadius,13,16,26]; @symbol_type<0> = [Number,13,30,36]; ]
+    private
+    var _arcRadius as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 14; @position = 16; @symbol_vardef = [_hintUpY,14,16,24]; @symbol_type<0> = [Number,14,28,34]; ]
+    private
+    var _hintUpY as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 15; @position = 16; @symbol_vardef = [_hintDownY,15,16,26]; @symbol_type<0> = [Number,15,30,36]; ]
+    private
+    var _hintDownY as Number = 0;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 17; @position = 18; @symbol_constdef = [COS_TABLE,17,18,27]; @symbol_type<0> = [Array,17,31,36]; @symbol_type<1> = [Number,17,37,43]; ]
+    private
+    const COS_TABLE as Array<Number>;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 20; @position = 18; @symbol_constdef = [SIN_TABLE,20,18,27]; @symbol_type<0> = [Array,20,31,36]; @symbol_type<1> = [Number,20,37,43]; ]
+    private
+    const SIN_TABLE as Array<Number>;
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 24; @symbol_functiondef = [initialize,24,13,23]; @symbol_param<0> = [selector,24,24,32]; @symbol_param<0>_type<0> = [NoteSelector,24,36,48]; @symbol_param<1> = [player,24,50,56]; @symbol_param<1>_type<0> = [TonePlayer,24,60,70]; ]
+    function initialize(selector as NoteSelector, player as TonePlayer) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_24_72_28_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 25 8 ]
+        symbol [ View %tmp.2 25 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 25 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 26 8 ]
+        %tmp.4 = lgetv %selector;
+        symbol [ selector %tmp.4 26 20 28 ];
+        symbol [ _selector ? 26 8 17 ];
+        putv self :_selector %tmp.4;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 27 8 ]
+        %tmp.5 = lgetv %player;
+        symbol [ player %tmp.5 27 18 24 ];
+        symbol [ _player ? 27 8 15 ];
+        putv self :_player %tmp.5;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_24_72_28_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 30; @symbol_functiondef = [onLayout,30,13,21]; @symbol_param<0> = [dc,30,22,24]; @symbol_param<0>_type<0> = [Dc,30,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 31 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 31 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 31 16 18 ];
+        symbol [ getWidth %tmp.2 31 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 31 12 13 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 32 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 32 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 32 16 18 ];
+        symbol [ getHeight %tmp.5 32 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 32 12 13 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 33 8 ]
+        %tmp.7 = lgetv %w.1;
+        symbol [ w %tmp.7 33 19 20 ];
+        %tmp.8 = 2;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        symbol [ _centerX ? 33 8 16 ];
+        putv self :_centerX %tmp.9;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 34 8 ]
+        %tmp.10 = lgetv %h.2;
+        symbol [ h %tmp.10 34 19 20 ];
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        symbol [ _centerY ? 34 8 16 ];
+        putv self :_centerY %tmp.12;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 36 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_stop" ]
+        %noteHeight.3 = local;
+        symbol [ noteHeight %noteHeight.3 36 12 22 ];
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 36 25 27 ];
+        symbol [ getFontHeight %tmp.14 36 28 41 ];
+        %tmp.14 = getv function %tmp.13 :getFontHeight;
+        symbol [ Graphics %tmp.15 36 42 50 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.16 36 51 61 ];
+        %tmp.16 = getv %tmp.15 :FONT_LARGE;
+        %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
+        lputv %noteHeight.3 %tmp.17;
+        symbol [ noteHeight %noteHeight.3 36 12 22 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 37 8 ]
+        symbol [ _centerY %tmp.19 37 17 25 ];
+        %tmp.19 = getv ? :_centerY;
+        %tmp.20 = lgetv %noteHeight.3;
+        symbol [ noteHeight %tmp.20 37 28 38 ];
+        %tmp.21 = 2;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        %tmp.23 = sub %tmp.19 %tmp.22;
+        %tmp.24 = 8;
+        %tmp.25 = sub %tmp.23 %tmp.24;
+        symbol [ _noteY ? 37 8 14 ];
+        putv self :_noteY %tmp.25;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 38 8 ]
+        symbol [ _noteY %tmp.27 38 17 23 ];
+        %tmp.27 = getv ? :_noteY;
+        %tmp.28 = lgetv %noteHeight.3;
+        symbol [ noteHeight %tmp.28 38 26 36 ];
+        %tmp.29 = add %tmp.27 %tmp.28;
+        %tmp.30 = 4;
+        %tmp.31 = add %tmp.29 %tmp.30;
+        symbol [ _freqY ? 38 8 14 ];
+        putv self :_freqY %tmp.31;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 40 8 ]
+        %tmp.32 = lgetv %w.1;
+        symbol [ w %tmp.32 40 21 22 ];
+        %tmp.33 = 2;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        %tmp.35 = 14;
+        %tmp.36 = sub %tmp.34 %tmp.35;
+        symbol [ _arcRadius ? 40 8 18 ];
+        putv self :_arcRadius %tmp.36;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 41 8 ]
+        %tmp.37 = 20;
+        symbol [ _hintUpY ? 41 8 16 ];
+        putv self :_hintUpY %tmp.37;
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 42 8 ]
+        %tmp.38 = lgetv %h.2;
+        symbol [ h %tmp.38 42 21 22 ];
+        %tmp.39 = 20;
+        %tmp.40 = sub %tmp.38 %tmp.39;
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 42 30 32 ];
+        symbol [ getFontHeight %tmp.42 42 33 46 ];
+        %tmp.42 = getv function %tmp.41 :getFontHeight;
+        symbol [ Graphics %tmp.43 42 47 55 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.44 42 56 66 ];
+        %tmp.44 = getv %tmp.43 :FONT_XTINY;
+        %tmp.45 = invoke %tmp.41 %tmp.42(%tmp.44);
+        %tmp.46 = sub %tmp.40 %tmp.45;
+        symbol [ _hintDownY ? 42 8 18 ];
+        putv self :_hintDownY %tmp.46;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_30_40_43_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 45; @symbol_functiondef = [onShow,45,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 48; @symbol_functiondef = [onUpdate,48,13,21]; @symbol_param<0> = [dc,48,22,24]; @symbol_param<0>_type<0> = [Dc,48,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 49 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop" ]
+        %index.1 = local;
+        symbol [ index %index.1 49 12 17 ];
+        symbol [ _selector %tmp.2 49 20 29 ];
+        %tmp.2 = getv ? :_selector;
+        symbol [ getCurrentIndex %tmp.3 49 30 45 ];
+        %tmp.3 = getv function %tmp.2 :getCurrentIndex;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %index.1 %tmp.4;
+        symbol [ index %index.1 49 12 17 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 50 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop" ]
+        %playing.2 = local;
+        symbol [ playing %playing.2 50 12 19 ];
+        symbol [ _player %tmp.6 50 22 29 ];
+        %tmp.6 = getv ? :_player;
+        symbol [ isPlaying %tmp.7 50 30 39 ];
+        %tmp.7 = getv function %tmp.6 :isPlaying;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %playing.2 %tmp.8;
+        symbol [ playing %playing.2 50 12 19 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 51 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop" ]
+        %noteInOctave.3 = local;
+        symbol [ noteInOctave %noteInOctave.3 51 12 24 ];
+        %tmp.9 = lgetv %index.1;
+        symbol [ index %tmp.9 51 27 32 ];
+        symbol [ NoteData %tmp.11 51 35 43 ];
+        %tmp.11 = getv ? :NoteData;
+        symbol [ NOTES_PER_OCTAVE %tmp.12 51 44 60 ];
+        %tmp.12 = getv %tmp.11 :NOTES_PER_OCTAVE;
+        %tmp.13 = mod %tmp.9 %tmp.12;
+        lputv %noteInOctave.3 %tmp.13;
+        symbol [ noteInOctave %noteInOctave.3 51 12 24 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 53 8 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 53 8 10 ];
+        symbol [ setColor %tmp.15 53 11 19 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        symbol [ Graphics %tmp.16 53 20 28 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.17 53 29 40 ];
+        %tmp.17 = getv %tmp.16 :COLOR_WHITE;
+        symbol [ Graphics %tmp.18 53 42 50 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.19 53 51 62 ];
+        %tmp.19 = getv %tmp.18 :COLOR_BLACK;
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 54 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 54 8 10 ];
+        symbol [ clear %tmp.21 54 11 16 ];
+        %tmp.21 = getv function %tmp.20 :clear;
+        invoke %tmp.20 %tmp.21();
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 56 8 ]
+        %tmp.22 = self;
+        symbol [ drawNoteArc %tmp.23 56 8 19 ];
+        %tmp.23 = getv function %tmp.22 :drawNoteArc;
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 56 20 22 ];
+        %tmp.25 = lgetv %noteInOctave.3;
+        symbol [ noteInOctave %tmp.25 56 24 36 ];
+        %tmp.26 = lgetv %playing.2;
+        symbol [ playing %tmp.26 56 38 45 ];
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 58 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop" ]
+        %noteColor.4 = local;
+        symbol [ noteColor %noteColor.4 58 12 21 ];
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_begin:
+        %tmp.27 = lgetv %playing.2;
+        symbol [ playing %tmp.27 58 24 31 ];
+        bf %tmp.27 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_else_false;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_true:
+        symbol [ Graphics %tmp.28 58 34 42 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.29 58 43 53 ];
+        %tmp.29 = getv %tmp.28 :COLOR_BLUE;
+        push %tmp.29;
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_else_false:
+        %tmp.30 = 0xCC8888;
+        push %tmp.30;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_end:
+        %tmp.31 = phi [%tmp.27 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_begin] [%tmp.29 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_true] [%tmp.30 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_else_false] [%tmp.31 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_58_24_58_56_end];
+        lputv %noteColor.4 %tmp.31;
+        symbol [ noteColor %noteColor.4 58 12 21 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 59 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 59 8 10 ];
+        symbol [ setColor %tmp.33 59 11 19 ];
+        %tmp.33 = getv function %tmp.32 :setColor;
+        %tmp.34 = lgetv %noteColor.4;
+        symbol [ noteColor %tmp.34 59 20 29 ];
+        symbol [ Graphics %tmp.35 59 31 39 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.36 59 40 57 ];
+        %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.36);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 60 8 ]
+        %tmp.37 = lgetv %dc;
+        symbol [ dc %tmp.37 60 8 10 ];
+        symbol [ drawText %tmp.38 60 11 19 ];
+        %tmp.38 = getv function %tmp.37 :drawText;
+        symbol [ _centerX %tmp.40 61 12 20 ];
+        %tmp.40 = getv ? :_centerX;
+        symbol [ _noteY %tmp.42 61 22 28 ];
+        %tmp.42 = getv ? :_noteY;
+        symbol [ Graphics %tmp.43 62 12 20 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.44 62 21 31 ];
+        %tmp.44 = getv %tmp.43 :FONT_LARGE;
+        symbol [ NoteData %tmp.46 63 12 20 ];
+        %tmp.46 = getv ? :NoteData;
+        symbol [ getDisplayName %tmp.47 63 21 35 ];
+        %tmp.47 = getv function %tmp.46 :getDisplayName;
+        %tmp.48 = lgetv %index.1;
+        symbol [ index %tmp.48 63 36 41 ];
+        %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+        symbol [ Graphics %tmp.50 64 12 20 ];
+        %tmp.50 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.51 64 21 40 ];
+        %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.37 %tmp.38(%tmp.40, %tmp.42, %tmp.44, %tmp.49, %tmp.51);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 67 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 67 8 10 ];
+        symbol [ setColor %tmp.53 67 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        %tmp.54 = 0x885555;
+        symbol [ Graphics %tmp.55 67 30 38 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.56 67 39 56 ];
+        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.56);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 68 8 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop" ]
+        %freqText.5 = local;
+        symbol [ freqText %freqText.5 68 12 20 ];
+        symbol [ NoteData %tmp.58 68 23 31 ];
+        %tmp.58 = getv ? :NoteData;
+        symbol [ getFrequency %tmp.59 68 32 44 ];
+        %tmp.59 = getv function %tmp.58 :getFrequency;
+        %tmp.60 = lgetv %index.1;
+        symbol [ index %tmp.60 68 45 50 ];
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        %tmp.62 = " Hz";
+        %tmp.63 = add %tmp.61 %tmp.62;
+        lputv %freqText.5 %tmp.63;
+        symbol [ freqText %freqText.5 68 12 20 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 69 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_8_71_8_if_stmt:
+        symbol [ _player %tmp.65 69 13 20 ];
+        %tmp.65 = getv ? :_player;
+        symbol [ hasToneSupport %tmp.66 69 21 35 ];
+        %tmp.66 = getv function %tmp.65 :hasToneSupport;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = not %tmp.67;
+        bf %tmp.68 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_8_71_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_8_71_8_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_39_71_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 70 12 ]
+        %tmp.69 = "No tone support";
+        lputv %freqText.5 %tmp.69;
+        symbol [ freqText %freqText.5 70 12 20 ];
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_39_71_8_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_8_71_8_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_69_8_71_8_if_end:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 72 8 ]
+        %tmp.70 = lgetv %dc;
+        symbol [ dc %tmp.70 72 8 10 ];
+        symbol [ drawText %tmp.71 72 11 19 ];
+        %tmp.71 = getv function %tmp.70 :drawText;
+        symbol [ _centerX %tmp.73 73 12 20 ];
+        %tmp.73 = getv ? :_centerX;
+        symbol [ _freqY %tmp.75 73 22 28 ];
+        %tmp.75 = getv ? :_freqY;
+        symbol [ Graphics %tmp.76 74 12 20 ];
+        %tmp.76 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.77 74 21 30 ];
+        %tmp.77 = getv %tmp.76 :FONT_TINY;
+        %tmp.78 = lgetv %freqText.5;
+        symbol [ freqText %tmp.78 75 12 20 ];
+        symbol [ Graphics %tmp.79 76 12 20 ];
+        %tmp.79 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.80 76 21 40 ];
+        %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.70 %tmp.71(%tmp.73, %tmp.75, %tmp.77, %tmp.78, %tmp.80);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 79 8 ]
+        %tmp.81 = self;
+        symbol [ drawHints %tmp.82 79 8 17 ];
+        %tmp.82 = getv function %tmp.81 :drawHints;
+        %tmp.83 = lgetv %dc;
+        symbol [ dc %tmp.83 79 18 20 ];
+        %tmp.84 = lgetv %index.1;
+        symbol [ index %tmp.84 79 22 27 ];
+        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.84);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_48_40_80_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 82; @symbol_functiondef = [onHide,82,13,19]; ]
+    function onHide() as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_82_30_84_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 83 8 ]
+        symbol [ _player %tmp.2 83 8 15 ];
+        %tmp.2 = getv ? :_player;
+        symbol [ stop %tmp.3 83 16 20 ];
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_82_30_84_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 86; @symbol_functiondef = [drawHints,86,21,30]; @symbol_param<0> = [dc,86,31,33]; @symbol_param<0>_type<0> = [Dc,86,37,39]; @symbol_param<1> = [index,86,41,46]; @symbol_param<1>_type<0> = [Number,86,50,56]; ]
+    private
+    function drawHints(dc as Dc, index as Number) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_86_66_100_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 87 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 87 8 10 ];
+        symbol [ setColor %tmp.2 87 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = 0x664444;
+        symbol [ Graphics %tmp.4 87 30 38 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.5 87 39 56 ];
+        %tmp.5 = getv %tmp.4 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 88 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 88 8 10 ];
+        symbol [ drawText %tmp.7 88 11 19 ];
+        %tmp.7 = getv function %tmp.6 :drawText;
+        symbol [ _centerX %tmp.9 89 12 20 ];
+        %tmp.9 = getv ? :_centerX;
+        symbol [ _hintUpY %tmp.11 89 22 30 ];
+        %tmp.11 = getv ? :_hintUpY;
+        symbol [ Graphics %tmp.12 90 12 20 ];
+        %tmp.12 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.13 90 21 31 ];
+        %tmp.13 = getv %tmp.12 :FONT_XTINY;
+        symbol [ NoteData %tmp.15 91 12 20 ];
+        %tmp.15 = getv ? :NoteData;
+        symbol [ getDisplayName %tmp.16 91 21 35 ];
+        %tmp.16 = getv function %tmp.15 :getDisplayName;
+        %tmp.17 = self;
+        symbol [ prevIndex %tmp.18 91 36 45 ];
+        %tmp.18 = getv function %tmp.17 :prevIndex;
+        %tmp.19 = lgetv %index;
+        symbol [ index %tmp.19 91 46 51 ];
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        %tmp.21 = invoke %tmp.15 %tmp.16(%tmp.20);
+        symbol [ Graphics %tmp.22 92 12 20 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.23 92 21 40 ];
+        %tmp.23 = getv %tmp.22 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.6 %tmp.7(%tmp.9, %tmp.11, %tmp.13, %tmp.21, %tmp.23);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 94 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 94 8 10 ];
+        symbol [ drawText %tmp.25 94 11 19 ];
+        %tmp.25 = getv function %tmp.24 :drawText;
+        symbol [ _centerX %tmp.27 95 12 20 ];
+        %tmp.27 = getv ? :_centerX;
+        symbol [ _hintDownY %tmp.29 95 22 32 ];
+        %tmp.29 = getv ? :_hintDownY;
+        symbol [ Graphics %tmp.30 96 12 20 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.31 96 21 31 ];
+        %tmp.31 = getv %tmp.30 :FONT_XTINY;
+        symbol [ NoteData %tmp.33 97 12 20 ];
+        %tmp.33 = getv ? :NoteData;
+        symbol [ getDisplayName %tmp.34 97 21 35 ];
+        %tmp.34 = getv function %tmp.33 :getDisplayName;
+        %tmp.35 = self;
+        symbol [ nextIndex %tmp.36 97 36 45 ];
+        %tmp.36 = getv function %tmp.35 :nextIndex;
+        %tmp.37 = lgetv %index;
+        symbol [ index %tmp.37 97 46 51 ];
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = invoke %tmp.33 %tmp.34(%tmp.38);
+        symbol [ Graphics %tmp.40 98 12 20 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 98 21 40 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29, %tmp.31, %tmp.39, %tmp.41);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_86_66_100_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 102; @symbol_functiondef = [drawNoteArc,102,21,32]; @symbol_param<0> = [dc,102,33,35]; @symbol_param<0>_type<0> = [Dc,102,39,41]; @symbol_param<1> = [noteInOctave,102,43,55]; @symbol_param<1>_type<0> = [Number,102,59,65]; @symbol_param<2> = [playing,102,67,74]; @symbol_param<2>_type<0> = [Boolean,102,78,85]; ]
+    private
+    function drawNoteArc(dc as Dc, noteInOctave as Number, playing as Boolean) as Void {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_102_95_117_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 103 8 ]
+        for @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_test @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_incr @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_init:
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_begin" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 103 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 103 17 18 ];
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 103 24 25 ];
+        %tmp.3 = 12;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_begin:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 104 12 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_stop" ]
+        %dx.2 = local;
+        symbol [ dx %dx.2 104 16 18 ];
+        symbol [ COS_TABLE %tmp.6 104 21 30 ];
+        %tmp.6 = getv ? :COS_TABLE;
+        %tmp.7 = lgetv %i.1;
+        symbol [ i %tmp.7 104 31 32 ];
+        %tmp.8 = agetv %tmp.6 %tmp.7;
+        symbol [ _arcRadius %tmp.10 104 36 46 ];
+        %tmp.10 = getv ? :_arcRadius;
+        %tmp.11 = mul %tmp.8 %tmp.10;
+        %tmp.12 = 1000;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        lputv %dx.2 %tmp.13;
+        symbol [ dx %dx.2 104 16 18 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 105 12 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_stop" ]
+        %dy.3 = local;
+        symbol [ dy %dy.3 105 16 18 ];
+        symbol [ SIN_TABLE %tmp.15 105 21 30 ];
+        %tmp.15 = getv ? :SIN_TABLE;
+        %tmp.16 = lgetv %i.1;
+        symbol [ i %tmp.16 105 31 32 ];
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        symbol [ _arcRadius %tmp.19 105 36 46 ];
+        %tmp.19 = getv ? :_arcRadius;
+        %tmp.20 = mul %tmp.17 %tmp.19;
+        %tmp.21 = 1000;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        lputv %dy.3 %tmp.22;
+        symbol [ dy %dy.3 105 16 18 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 106 12 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_stop" ]
+        %px.4 = local;
+        symbol [ px %px.4 106 16 18 ];
+        symbol [ _centerX %tmp.24 106 21 29 ];
+        %tmp.24 = getv ? :_centerX;
+        %tmp.25 = lgetv %dx.2;
+        symbol [ dx %tmp.25 106 32 34 ];
+        %tmp.26 = add %tmp.24 %tmp.25;
+        lputv %px.4 %tmp.26;
+        symbol [ px %px.4 106 16 18 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 107 12 ]
+        [ "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_start" "_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_stop" ]
+        %py.5 = local;
+        symbol [ py %py.5 107 16 18 ];
+        symbol [ _centerY %tmp.28 107 21 29 ];
+        %tmp.28 = getv ? :_centerY;
+        %tmp.29 = lgetv %dy.3;
+        symbol [ dy %tmp.29 107 32 34 ];
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        lputv %py.5 %tmp.30;
+        symbol [ py %py.5 107 16 18 ];
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 109 12 ]
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_stmt:
+        %tmp.31 = lgetv %i.1;
+        symbol [ i %tmp.31 109 16 17 ];
+        %tmp.32 = lgetv %noteInOctave;
+        symbol [ noteInOctave %tmp.32 109 21 33 ];
+        %tmp.33 = eq %tmp.31 %tmp.32;
+        bf %tmp.33 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_else_false;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_true:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_35_112_12_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 110 16 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 110 16 18 ];
+        symbol [ setColor %tmp.35 110 19 27 ];
+        %tmp.35 = getv function %tmp.34 :setColor;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_begin:
+        %tmp.36 = lgetv %playing;
+        symbol [ playing %tmp.36 110 28 35 ];
+        bf %tmp.36 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_else_false;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_true:
+        symbol [ Graphics %tmp.37 110 38 46 ];
+        %tmp.37 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLUE %tmp.38 110 47 57 ];
+        %tmp.38 = getv %tmp.37 :COLOR_BLUE;
+        push %tmp.38;
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_else_false:
+        %tmp.39 = 0xCC8888;
+        push %tmp.39;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_end:
+        %tmp.40 = phi [%tmp.36 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_begin] [%tmp.38 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_true] [%tmp.39 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_else_false] [%tmp.40 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_110_28_110_60_end];
+        symbol [ Graphics %tmp.41 110 70 78 ];
+        %tmp.41 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.42 110 79 96 ];
+        %tmp.42 = getv %tmp.41 :COLOR_TRANSPARENT;
+        invoke %tmp.34 %tmp.35(%tmp.40, %tmp.42);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 111 16 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 111 16 18 ];
+        symbol [ fillCircle %tmp.44 111 19 29 ];
+        %tmp.44 = getv function %tmp.43 :fillCircle;
+        %tmp.45 = lgetv %px.4;
+        symbol [ px %tmp.45 111 30 32 ];
+        %tmp.46 = lgetv %py.5;
+        symbol [ py %tmp.46 111 34 36 ];
+        %tmp.47 = 5;
+        invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46, %tmp.47);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_35_112_12_stop:
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_else_false:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_112_19_115_12_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 113 16 ]
+        %tmp.48 = lgetv %dc;
+        symbol [ dc %tmp.48 113 16 18 ];
+        symbol [ setColor %tmp.49 113 19 27 ];
+        %tmp.49 = getv function %tmp.48 :setColor;
+        %tmp.50 = 0x553333;
+        symbol [ Graphics %tmp.51 113 38 46 ];
+        %tmp.51 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.52 113 47 64 ];
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.48 %tmp.49(%tmp.50, %tmp.52);
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 114 16 ]
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 114 16 18 ];
+        symbol [ fillCircle %tmp.54 114 19 29 ];
+        %tmp.54 = getv function %tmp.53 :fillCircle;
+        %tmp.55 = lgetv %px.4;
+        symbol [ px %tmp.55 114 30 32 ];
+        %tmp.56 = lgetv %py.5;
+        symbol [ py %tmp.56 114 34 36 ];
+        %tmp.57 = 2;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.56, %tmp.57);
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_112_19_115_12_stop:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_109_12_115_12_if_end:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_37_116_8_stop:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_incr:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 103 ]
+        %tmp.60 = lgetv %i.1;
+        symbol [ i %tmp.60 103 32 33 ];
+        %tmp.61 = add %tmp.60 1;
+        lputv %i.1 %tmp.61;
+        symbol [ i %i.1 103 32 33 ];
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_test;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_103_8_116_8_for_end:
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_102_95_117_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 119; @symbol_functiondef = [nextIndex,119,21,30]; @symbol_param<0> = [index,119,31,36]; @symbol_param<0>_type<0> = [Number,119,40,46]; @symbol_return<0> = [Number,119,51,57]; ]
+    private
+    function nextIndex(index as Number) as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_119_58_121_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 120 8 ]
+        %tmp.1 = lgetv %index;
+        symbol [ index %tmp.1 120 16 21 ];
+        %tmp.2 = 1;
+        %tmp.3 = add %tmp.1 %tmp.2;
+        symbol [ NoteData %tmp.5 120 29 37 ];
+        %tmp.5 = getv ? :NoteData;
+        symbol [ getNoteCount %tmp.6 120 38 50 ];
+        %tmp.6 = getv function %tmp.5 :getNoteCount;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = mod %tmp.3 %tmp.7;
+        ret %tmp.8;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_119_58_121_4_stop:
+    }
+    [ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 123; @symbol_functiondef = [prevIndex,123,21,30]; @symbol_param<0> = [index,123,31,36]; @symbol_param<0>_type<0> = [Number,123,40,46]; @symbol_return<0> = [Number,123,51,57]; ]
+    private
+    function prevIndex(index as Number) as Number {
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_123_58_125_4_start:
+[ "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc" 124 8 ]
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_begin:
+        %tmp.1 = lgetv %index;
+        symbol [ index %tmp.1 124 15 20 ];
+        %tmp.2 = 0;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_else_false;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_true:
+        symbol [ NoteData %tmp.5 124 28 36 ];
+        %tmp.5 = getv ? :NoteData;
+        symbol [ getNoteCount %tmp.6 124 37 49 ];
+        %tmp.6 = getv function %tmp.5 :getNoteCount;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = 1;
+        %tmp.9 = sub %tmp.7 %tmp.8;
+        push %tmp.9;
+        goto @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_end;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_else_false:
+        %tmp.10 = lgetv %index;
+        symbol [ index %tmp.10 124 58 63 ];
+        %tmp.11 = 1;
+        %tmp.12 = sub %tmp.10 %tmp.11;
+        push %tmp.12;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_end:
+        %tmp.13 = phi [%tmp.3 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_begin] [%tmp.9 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_true] [%tmp.12 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_else_false] [%tmp.13 @_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_124_15_124_66_end];
+        ret %tmp.13;
+_Users_hookline_coding_projects_pitch_pipe_source_PitchPipeView_mc_123_58_125_4_stop:
+    }
+}
+[ @file = "/Users/hookline/coding/projects/pitch-pipe/source/PitchPipeView.mc"; @line = 1; ]
+<init> {
+}
