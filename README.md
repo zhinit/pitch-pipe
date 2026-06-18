@@ -1,101 +1,89 @@
-# Pitch Pipe for Garmin Forerunner 245 Music
+# Pitch Pipe for Garmin
 
-A pitch pipe app for your Garmin watch. It plays reference tones for tuning
+A pitch pipe app for Garmin watches. It plays reference tones for tuning
 instruments or matching pitch. Scroll through notes, press a button, hear the
 tone.
 
----
+Supports 100+ Garmin watches including Forerunner, fēnix, epix, Instinct,
+Venu, vívoactive, MARQ, Descent, and Approach series.
 
-## How to get the app on your watch
+<!-- TODO: uncomment when the store listing is live
+## Install
 
-### Step 1: Download the app file
-
-On this page, look in the file list for the folder called **`bin`**. Click on
-it, then click on **`pitch-pipe-release.prg`**. On the next page, click the
-**Download raw file** button (it's a downward arrow icon on the right side).
-The file will download to your Mac.
-
-### Step 2: Connect your watch
-
-Plug your Forerunner 245 Music into your Mac with the charging/data cable.
-Your watch should appear as a drive in Finder, similar to a USB flash drive.
-The drive might be called **GARMIN** or **FR245M** or similar.
-
-### Step 3: Copy the file to the watch
-
-1. Open the watch drive in Finder
-2. Find the folder called **GARMIN**, then inside that, find **APPS**
-   (the full path is `GARMIN/APPS/`)
-3. Drag the **`pitch-pipe-release.prg`** file you downloaded into the
-   **APPS** folder
-4. Eject the watch drive (right-click it in Finder and choose Eject, or drag
-   it to the trash)
-5. Unplug the cable
-
-### Step 4: Open the app on your watch
-
-1. From the watch face, press and hold the **UP** button (middle left) to
-   open the menu
-2. Scroll to find **Pitch Pipe** in the list
-3. Press **START/STOP** (top right) to open it
+Install from the [Connect IQ Store](https://apps.garmin.com/en-US/apps/YOUR_APP_ID).
+-->
 
 ---
 
-## How to use the app
+## How to use
 
 The app shows a note name (like **A4**) and its frequency in Hz.
 
 | Button | What it does |
 |---|---|
-| **UP** (middle left) | Go to the previous note |
-| **DOWN** (bottom left) | Go to the next note |
-| **START/STOP** (top right) | Play or stop the tone |
+| **UP** (middle left) | Previous note |
+| **DOWN** (bottom left) | Next note |
+| **START/STOP** (top right) | Play / stop the tone |
 | **BACK** (bottom right) | Exit the app |
 
-- The app has 12 notes from **C4** to **B4** (one octave), looping around
-- It starts on **A4** (440 Hz), the standard tuning reference
-- When a tone is playing, the note name turns blue
-- The dots around the edge of the screen show where you are in the 12-note
-  scale
-- If you change notes while a tone is playing, the tone automatically
-  switches to the new note
+- 12 notes from **C4** to **B4** (one octave), looping around
+- Starts on **A4** (440 Hz), the standard tuning reference
+- Note name turns blue while a tone is playing
+- The dots around the edge show your position in the 12-note scale
+- Changing notes while playing automatically switches the tone
+
+The tone plays for up to 30 seconds, then stops. Press START/STOP to restart.
 
 ---
 
-## Notes
+## Compatible devices
 
-- The tone plays for up to 30 seconds, then stops on its own. Press
-  START/STOP again to restart it.
-- The tone comes from the watch's built-in beeper (the same hardware that
-  makes alert sounds). It won't sound like a piano or a guitar — it's an
-  electronic tone at the correct pitch.
-- The sharp notes are shown with `#` (for example, `F#4` means F-sharp in
-  octave 4).
+The app works on Garmin devices with a **beeper** (tone generator). Newer
+devices with a speaker (fēnix 8, Forerunner 570/970, Venu 3/4) are not
+supported — Garmin's speaker hardware cannot play custom frequencies.
+
+**Supported watches include:** Forerunner 55/70/165/170/245/255/265/645/745/935/945/955/965,
+fēnix 5/5 Plus/6/7/E, epix (Gen 2)/Pro, Instinct 2/3/E, Venu/Venu 2/Sq,
+vívoactive 3/4/5/6, MARQ (Gen 1 & 2), Descent, Enduro, Approach, D2, and more.
+
+See the full list in [`manifest.xml`](manifest.xml).
 
 ---
 
 ## Alert Tones must be enabled
 
-The app plays sound through the watch's beeper using the Connect IQ
-`Attention.playTone()` API. This API is gated by the system-level **Alert
-Tones** setting — if Alert Tones is off, `playTone()` silently does nothing.
-There is no way for an app to override this; Garmin enforces it at the OS
-level ([confirmed by Garmin staff](https://forums.garmin.com/developer/connect-iq/f/discussion/195502/can-ciq-ignore-devicesettings-for-tones-vibrate)).
+The app uses the watch's beeper via the `Attention.playTone()` API, which is
+gated by the system **Alert Tones** setting. If Alert Tones is off, the app
+shows **"Enable Alert Tones"** instead of the frequency.
 
-To enable it: from the watch face, hold **UP** → **System** → **Sounds** →
-**Alert Tones** → turn it on.
-
-If Alert Tones is off, the app will show **"Enable Alert Tones"** in place of
-the frequency.
+To enable: from the watch face, hold **UP** → **System** → **Sounds** →
+**Alert Tones** → turn on.
 
 ---
 
-## Feedback
+## Building from source
 
-If something doesn't work or a note sounds wrong, let me know:
-- Which note you were playing
-- What happened vs. what you expected
-- Whether the watch made any sound at all
+Requires the [Connect IQ SDK](https://developer.garmin.com/connect-iq/sdk/).
 
-This is the first version and hasn't been tested on the actual watch yet, so
-your feedback helps a lot.
+Build for a specific device:
+
+```
+monkeyc -d fr245m -f monkey.jungle -o bin/pitch-pipe.prg -y developer_key.der -w
+```
+
+Build the store package (all devices):
+
+```
+monkeyc -e -f monkey.jungle -o bin/pitch-pipe.iq -y developer_key.der -w -r
+```
+
+---
+
+## Sideloading
+
+If you want to install without the Connect IQ Store:
+
+1. Build the `.prg` for your device (see above)
+2. Connect your watch to your computer via USB
+3. Copy the `.prg` file to `GARMIN/APPS/` on the watch drive
+4. Eject and unplug
