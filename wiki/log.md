@@ -204,3 +204,68 @@ sample rate, 8-bit depth) through laptop speakers. WAV duration is fixed at
 Wiki pages updated:
 
 - simulator — Updated ToneProfile section with WAV file details and quality info
+
+## 2026-06-17 — Research: multi-device compatibility and speaker vs beeper devices
+
+Sources archived:
+
+- connectiq-compatible-devices-full.md — Complete CIQ device list with API levels (127+ devices)
+- connectiq-toneprofile-supported-devices-2026.md — ToneProfile API page with full device list and note about speaker limitation
+- garmin-speaker-devices-research.md — Which devices have speakers vs beepers, compiled from product pages, reviews, and Garmin forum posts
+
+Wiki pages created:
+
+- multi-device-compatibility — Full guide to expanding the app: candidate beeper devices with product IDs, speaker devices to exclude, manifest setup, screen size considerations
+
+Wiki pages updated:
+
+- beeper-vs-speaker — Expanded from brief summary to comprehensive device list with confirmed speaker and beeper devices
+- index — Added Device Compatibility section
+
+## 2026-06-17 — Research: custom audio on speaker devices
+
+Sources archived:
+
+- connectiq-media-api.md — Toybox.Media module: audio content provider architecture, supported formats (MP3/M4A/WAV/ADTS), playback through system media player
+- connectiq-audiocontentproviderapp-api.md — AudioContentProviderApp class: CDN sync, encrypted storage, system player delegation
+- blog-creating-music-apps-ciq3.md — Garmin blog on music app architecture: CDN bridge, AES-128 encryption, ContentDelegate pattern
+- forum-playtones-new-devices-full.md — Full thread: no custom audio files on speaker devices, Garmin says feature "not yet prioritized"
+
+Wiki pages created:
+
+- speaker-audio-limitation — Why speaker devices can't run a pitch pipe: no custom audio API exists, Audio Content Provider is for music streaming services, Garmin has no timeline for custom speaker audio
+
+Wiki pages updated:
+
+- index — Added speaker-audio-limitation to Device Compatibility section
+
+## 2026-06-17 — Research: publishing to the Connect IQ Store
+
+Sources archived:
+
+- connectiq-store-submission.md — Submission process: account registration, upload URL, review timeline
+- connectiq-store-assets.md — Asset requirements: 500×500 icon, 128×128 on-device icon, 1440×720 hero image, screenshots
+- connectiq-monkeyc-cli-export.md — CLI reference for -e (--package-app) flag to build .iq store packages
+
+Wiki pages created:
+
+- publishing-to-store — End-to-end publishing guide: prerequisites, building the .iq package, submission steps, review timeline, checklist of remaining work
+
+Wiki pages updated:
+
+- index — Added Publishing section
+
+## 2026-06-17 — Research: Connect IQ Store monetization
+
+Sources archived:
+
+- connectiq-monetization-overview.md — Full monetization system: $100/yr fee, 15% commission, CIQ System 7+ requirement, supported countries, developer experiences
+- connectiq-monetization-best-practices.md — Garmin's guidelines for paid apps: payment badge, trial periods, UX rules, developer requirements
+
+Wiki pages created:
+
+- monetization — Monetization options, costs, device compatibility impact, break-even math, comparison of paid vs free
+
+Wiki pages updated:
+
+- index — Added monetization to Publishing section

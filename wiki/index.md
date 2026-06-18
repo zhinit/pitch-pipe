@@ -29,6 +29,12 @@
 - [[view-lifecycle]] — View lifecycle (onLayout→onShow→onUpdate→onHide), Graphics.Dc drawing API, fonts, colors
 - [[timer-api]] — Toybox.Timer: start/stop, repeating callbacks, 50ms minimum, 3-timer limit
 
+## Device Compatibility
+
+- [[multi-device-compatibility]] — Expanding to other Garmin watches: candidate devices, product IDs, speaker exclusions, manifest setup
+- [[beeper-vs-speaker]] — Hardware distinction determining whether ToneProfile works; comprehensive device list
+- [[speaker-audio-limitation]] — Why speaker devices can't run a pitch pipe: no custom audio API, Audio Content Provider won't help
+
 ## Audio APIs
 
 - [[attention-api]] — Toybox.Attention module: playTone, vibrate, backlight, device capability checks
@@ -42,6 +48,11 @@
 - [[lidar-theremin]] — Official Garmin sample using ToneProfile at 50–4000 Hz; lists fr245m as supported
 - [[vibratest]] — Developer tool for testing tone/vibration profiles; complete source code available
 - [[existing-audio-apps]] — Survey of Connect IQ apps using audio: no existing pitch pipe found
+
+## Publishing
+
+- [[publishing-to-store]] — How to publish to the Connect IQ Store: account, assets, packaging, submission, review
+- [[monetization]] — Charging money: $100/yr fee, 15% commission, CIQ System 7+ only, or publish free
 
 ## Music Theory
 
